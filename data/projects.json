@@ -1,0 +1,42 @@
+[
+   {
+      "id": "netflix-clone",
+      "title": "Netflix UI/UX Renewal",
+      "mainImage": "../assets/images/project-netflix/NetFlix.png",
+      "description": "Swiper.js와 GSAP를 활용하여 기존 넷플릭스 UI에 동적인 애니메이션과 사용자 경험을 더한 클론 코딩 프로젝트입니다.",
+      "features": [
+         "Swiper.js를 활용한 자동 재생 배너 슬라이더",
+         "JSON 데이터 연동, 장르별 Top 10 동적 로딩 탭 메뉴",
+         "GSAP ScrollToPlugin을 이용한 부드러운 스크롤 UX"
+      ],
+      "techStack": ["HTML", "CSS", "JavaScript", "Swiper.js", "GSAP"],
+      "liveUrl": "https://jaejun0617.github.io/Netflix-Clone-Renewal/",
+      "githubUrl": "https://github.com/jaejun0617/Netflix-Clone-Renewal"
+   },
+   {
+      "id": "apple-clone",
+      "title": "Apple UI/UX Renewal",
+      "description": "Intersection Observer와 GSAP를 중심으로, 사용자의 스크롤과 마우스 움직임에 반응하는 인터랙티브 포트폴리오 웹사이트입니다.",
+      "features": [
+         "Intersection Observer 기반 스크롤 애니메이션",
+         "GSAP ScrollTrigger를 활용한 고급 인터랙션",
+         "다크/라이트 모드 테마 전환 기능"
+      ],
+      "techStack": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "liveUrl": "#",
+      "githubUrl": "#"
+   },
+   {
+      "id": "youtube-clone",
+      "title": "youtube UI/UX Renewal",
+      "description": "Intersection Observer와 GSAP를 중심으로, 사용자의 스크롤과 마우스 움직임에 반응하는 인터랙티브 포트폴리오 웹사이트입니다.",
+      "features": [
+         "Intersection Observer 기반 스크롤 애니메이션",
+         "GSAP ScrollTrigger를 활용한 고급 인터랙션",
+         "다크/라이트 모드 테마 전환 기능"
+      ],
+      "techStack": ["HTML", "CSS", "JavaScript", "GSAP"],
+      "liveUrl": "#",
+      "githubUrl": "#"
+   }
+]

@@ -1,0 +1,23 @@
+/* common.css */
+body {
+   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+   color: white;
+   overflow: hidden;
+   scrollbar-width: none;
+   -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+   display: none;
+}
+
+/* --- Typography --- */
+h1 {
+   font-size: 4rem;
+}
+h2 {
+   font-size: 3rem;
+}
+
+.section-title {
+   margin-bottom: 3rem;
+}

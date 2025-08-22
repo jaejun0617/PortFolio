@@ -1,0 +1,195 @@
+/* layout.css */
+
+/* --- Page & Splash Screen Layout --- */
+.page-wrapper {
+   opacity: 0;
+} /* JS가 제어할 초기 상태 */
+.page-wrapper.visible {
+   opacity: 1;
+   transition: opacity 1s ease;
+}
+
+.splash-screen {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: #000;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 9999;
+   transition:
+      opacity 1s ease,
+      visibility 1s ease;
+}
+.splash-screen.hidden {
+   opacity: 0;
+   visibility: hidden;
+}
+
+/* --- Header, Side Nav, Progress Bar Layout --- */
+.main-header,
+.progress-bar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 1000;
+}
+.main-header {
+   padding: 20px 40px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   /* [추가] 부드러운 등장을 위한 초기 상태 */
+   opacity: 0;
+   transform: translateY(-100%);
+   transition: all 0.8s ease 0.5s;
+}
+.main-header.visible {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.side-nav {
+   position: fixed;
+   top: 50%;
+   right: 40px;
+   transform: translateY(-50%);
+   z-index: 1000;
+}
+.side-nav li {
+   margin: 25px 0;
+   text-align: right;
+}
+
+/* --- Section Containers Layout --- */
+.section {
+   width: 100%;
+   min-height: 100vh;
+   padding: 100px 5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-repeat: no-repeat;
+   background-position: center center;
+   background-size: cover;
+   position: relative; /* 오버레이를 위한 기준점 */
+}
+
+/* 
+  [핵심] 모든 섹션의 상단과 하단에
+  배경색과 동일한 색상의 그라데이션 오버레이를 추가합니다.
+*/
+.section::before,
+.section::after {
+   content: '';
+   position: absolute;
+   left: 0;
+   width: 100%;
+   height: 150px; /* 그라데이션의 높이 */
+   pointer-events: none; /* 마우스 이벤트를 통과시킴 */
+   z-index: 2; /* 텍스처 배경보다는 위에, 콘텐츠보다는 아래에 */
+}
+
+/* 상단 그라데이션: 투명 -> 불투명 */
+.section::before {
+   top: 0;
+   background: linear-gradient(to bottom, var(--section-bg-color) 0%, transparent 50%);
+}
+
+/* 하단 그라데이션: 불투명 -> 투명 */
+.section::after {
+   bottom: 0;
+   background: linear-gradient(to top, var(--section-bg-color) 0%, transparent 50%);
+}
+
+/* 실제 콘텐츠는 오버레이보다 위에 오도록 z-index를 설정해야 합니다. */
+.section > * {
+   position: relative;
+   z-index: 2;
+}
+
+/* 각 섹션별 배경색 */
+#hero {
+   user-select: none;
+   pointer-events: none;
+   background-color: var(--bg-color);
+}
+#about {
+   user-select: none;
+   pointer-events: none;
+   background-image: var(--about-bg-image);
+}
+
+/* --- SKILLS SECTION --- */
+#skills {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-image: var(--skills-bg-image);
+}
+.code-editor {
+   width: 80%;
+   max-width: 800px;
+
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+.editor-header {
+   padding: 10px;
+   background: #333;
+   display: flex;
+   align-items: center;
+   border-radius: 10px;
+}
+.skills-dot {
+   width: 12px;
+   height: 12px;
+   border-radius: 50%;
+   margin: 0 4px;
+}
+.skills-dot.red {
+   background: #ff5f56;
+}
+.skills-dot.yellow {
+   background: #ffbd2e;
+}
+.skills-dot.green {
+   background: #27c93f;
+}
+.file-name {
+   color: #ccc;
+   margin-left: auto;
+}
+.editor-body {
+   padding: 20px;
+   font-family: 'Roboto Mono', monospace;
+   min-height: 300px;
+   color: var(--text-color);
+}
+#code-output::after {
+   content: '|';
+   animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+   50% {
+      opacity: 0;
+   }
+}
+
+#projects {
+   background-image: var(--projects-bg-image);
+}
+
+#contact {
+   user-select: none;
+   pointer-events: none;
+   background-image: var(--contact-bg-image);
+}

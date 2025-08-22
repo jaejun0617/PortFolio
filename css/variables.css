@@ -1,0 +1,75 @@
+/* common.css 또는 variables.css */
+
+/* --- [핵심 1] 두 가지 테마의 색상 팔레트를 정의합니다. --- */
+
+/* 라이트 모드 (기본값) */
+:root {
+   --bg-color: #f5f5f7; /* 아주 옅은 회색 배경 */
+   --section-bg-color: #ffffff; /* 섹션 배경은 흰색 */
+   --text-color: #1d1d1f; /* 거의 검은색 텍스트 */
+   --subtext-color: #86868b; /* 연한 회색 서브텍스트 */
+   --accent-color: #0071e3; /* 포인트 컬러 (파란색) */
+   --about-bg-image: url('../assets/images/main/about/about-bg.png');
+   --skills-bg-image: url('../assets/images/main/skills/skill-bg.png');
+   --projects-bg-image: url('../assets/images/main/body-bg.png');
+   --contact-bg-image: url('../assets/images/main/contact/contact-bg.jpg');
+
+   --border-color: border 1px solid #fff;
+}
+
+/* 
+  [핵심 2] body에 'dark-theme' 클래스가 붙었을 때,
+  CSS 변수들의 값을 완전히 다른 것으로 '덮어쓰기'합니다.
+*/
+body.dark-theme {
+   --bg-color: #111111; /* 짙은 검은색 배경 */
+   --section-bg-color: #1d1d1d; /* 섹션 배경은 살짝 밝은 검은색 */
+   --text-color: #f5f5f7; /* 거의 흰색 텍스트 */
+   --subtext-color: #86868b; /* 연한 회색 서브텍스트 (유지) */
+   --accent-color: #2997ff; /* 더 밝은 파란색 포인트 컬러 */
+   --border-color: border 1px solid #000;
+   --hero-bg-image: none;
+   --about-bg-image: none;
+   --skills-bg-image: none;
+   --projects-bg-image: none;
+   --contact-bg-image: none;
+}
+
+/* --- [핵심 3] 이제 모든 요소는 이 '변수'를 사용합니다. --- */
+
+body {
+   background-color: var(--bg-color);
+   color: var(--text-color);
+   /* 부드러운 색상 전환을 위해 transition 추가 */
+   transition:
+      background-color 0.4s ease,
+      color 0.4s ease;
+}
+
+.section {
+   background-color: var(--section-bg-color);
+}
+
+h1,
+h2 {
+   color: var(--text-color);
+}
+
+.side-nav .nav-link {
+   color: var(--subtext-color);
+}
+.side-nav .nav-link.active {
+   color: var(--text-color);
+}
+
+.main-nav .nav-link {
+   color: var(--text-color);
+}
+
+.progress-bar {
+   background-color: var(--accent-color);
+   /* 
+      [참고] 프로그레스 바는 JS로 색이 계속 바뀌므로, 
+      테마 전환 시 기본 색만 바뀌도록 할 수 있습니다. 
+    */
+}

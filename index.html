@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>"The Developer's Desk" - 당신의 작업 공간으로의 초대</title>
+      <!-- CSS 파일 로드 순서 -->
+      <link rel="stylesheet" href="./css/reset.css" />
+      <!-- 1. 초기화 -->
+      <link rel="stylesheet" href="./css/common.css" />
+      <!-- 2. 전역 규칙 -->
+      <link rel="stylesheet" href="./css/layout.css" />
+      <!-- 3. 페이지 뼈대 -->
+      <link rel="stylesheet" href="./css/components.css" />
+      <!-- 4. 세부 디자인 -->
+      <link rel="stylesheet" href="./css/variables.css" />
+   </head>
+   <body>
+      <!-- =================================================================
+     [추가] 인트로 스플래시 스크린
+    ================================================================== -->
+      <div class="splash-screen">
+         <div class="lock-pattern-container">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+
+            <svg class="line-canvas" width="100%" height="100%"></svg>
+         </div>
+         <p class="splash-text">UNLOCKING CREATIVITY...</p>
+      </div>
+
+      <!-- =================================================================
+     [수정] 전체 콘텐츠를 감싸는 래퍼
+    ================================================================== -->
+      <div class="page-wrapper">
+         <!-- 스크롤 진행 바 -->
+         <div class="progress-bar"></div>
+
+         <!-- [추가] 일반적인 상단 헤더 -->
+         <header class="main-header">
+            <nav class="main-nav">
+               <li class="logo">
+                  <a href="#hero">
+                     <img src="./assets/images/main/header/main_profile.png" alt="내 프로플" />
+                  </a>
+               </li>
+               <li>
+                  <a class="nav-link" href="https://github.com/jaejun0617" target="_blank" rel="noopener noreferrer"
+                     >Github</a
+                  >
+               </li>
+               <li>
+                  <a
+                     class="nav-link"
+                     href="https://www.notion.so/dev-6-5f336ecb3b0e4d4e9d15059bcbdb3cbc"
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     >Notion</a
+                  >
+               </li>
+            </nav>
+            <!-- [추가] 다크 모드 토글 스위치 -->
+            <div class="theme-switcher">
+               <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" />
+               <label for="theme-toggle" class="theme-toggle-label">
+                  <span class="sun">☀️</span>
+                  <span class="moon">🌙</span>
+               </label>
+            </div>
+         </header>
+
+         <!-- 사이드 내비게이션 -->
+         <aside class="side-nav">
+            <ul>
+               <li><a href="#hero" class="nav-link scroll-link active">Home</a></li>
+               <li><a href="#about" class="nav-link scroll-link">About</a></li>
+               <li><a href="#skills" class="nav-link scroll-link">Skills</a></li>
+               <li><a href="#projects" class="nav-link scroll-link">Projects</a></li>
+               <li><a href="#contact" class="nav-link scroll-link">Contact</a></li>
+            </ul>
+         </aside>
+
+         <!-- 메인 콘텐츠 영역 -->
+         <main class="content-wrapper">
+            <!-- Home -->
+            <section id="hero" class="section" data-progress-color="#E74C3C">
+               <h1>OOO's PORTFOLIO</h1>
+            </section>
+
+            <!-- About -->
+            <section id="about" class="section" data-progress-color="#E67E22">
+               <h2>About Me</h2>
+            </section>
+
+            <!-- Skill -->
+            <section id="skills" class="section" data-progress-color="#2ECC71">
+               <div class="code-editor">
+                  <div class="editor-header">
+                     <span class="skills-dot red"></span><span class="skills-dot yellow"></span
+                     ><span class="skills-dot green"></span>
+                     <span class="file-name">my-skills.js</span>
+                  </div>
+                  <div class="editor-body">
+                     <pre><code id="code-output" class="language-javascript"></code></pre>
+                  </div>
+               </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="section" data-progress-color="#F1C40F">
+               <!-- 섹션 타이틀 -->
+               <div class="section-title">
+                  <h2>My Projects Workspace</h2>
+               </div>
+
+               <!-- 프로젝트 콘텐츠 전체를 감싸는 래퍼 -->
+               <div class="projects-wrapper">
+                  <!-- 1. 대표 프로젝트 (노트북) -->
+
+                  <div class="main-project-container">
+                     <div class="laptop-mockup">
+                        <div class="editor-header">
+                           <span class="skills-dot red"></span><span class="skills-dot yellow"></span
+                           ><span class="skills-dot green"></span>
+                        </div>
+                        <div class="laptop-screen">
+                           <img
+                              src="./assets/images/project-the-select/The-select.png"
+                              alt="THE SELECT 쇼핑몰 메인 이미지"
+                           />
+                        </div>
+                     </div>
+                     <div class="project-info main-project-info">
+                        <!-- [핵심 수정!] 각 요소에 명확한 클래스 추가 -->
+                        <h3 class="project-title">THE SELECT - Luxury E-commerce</h3>
+                        <p class="project-description">기획부터 배포까지, 바닐라 JS로 구현한 반응형 쇼핑몰 프로젝트</p>
+                        <div class="project-links">
+                           <a href="#" class="project-link-live" target="_blank">View Live</a>
+                           <a href="#" class="project-link-github" target="_blank">GitHub</a>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- 2. 서브 프로젝트 (폴더들) -->
+                  <div class="sub-projects-container">
+                     <!-- 프로젝트 폴더 1 -->
+                     <div
+                        class="project-folder"
+                        data-project-id="netflix-clone"
+                        data-image-src="./assets/images/project-netflix/NetFlix.png"
+                     >
+                        <div class="folder-icon">
+                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
+                           <!-- 호버 시 나타날 미리보기 이미지 -->
+                           <div class="folder-preview">
+                              <img src="./assets/images/project-netflix/NetFlix.png" alt="넷플릭스 클론 미리보기" />
+                           </div>
+                        </div>
+                        <span class="folder-name">Netflix Clone</span>
+                     </div>
+
+                     <!-- 프로젝트 폴더 2 -->
+                     <div
+                        class="project-folder"
+                        data-project-id="apple-clone"
+                        data-image-src="./assets/images/project-apple/apple.png"
+                     >
+                        <div class="folder-icon">
+                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
+                           <div class="folder-preview">
+                              <img src="./assets/images/project-apple/apple.png" alt="포트폴리오 사이트 미리보기" />
+                           </div>
+                        </div>
+                        <span class="folder-name">Apple Site</span>
+                     </div>
+
+                     <!-- 프로젝트 폴더 3 -->
+                     <div
+                        class="project-folder"
+                        data-project-id="youtube-clone"
+                        data-image-src="./assets/images/project-youtube/youtube.png"
+                     >
+                        <div class="folder-icon">
+                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
+                           <div class="folder-preview">
+                              <img src="./assets/images/project-youtube/youtube.png" alt="포트폴리오 사이트 미리보기" />
+                           </div>
+                        </div>
+                        <span class="folder-name">YouTube Site</span>
+                     </div>
+
+                     <!-- 프로젝트 폴더 4 (준비중) -->
+                     <div class="project-folder upcoming">
+                        <div class="folder-icon">
+                           <img src="./assets/icons/locked-folder.png" alt="잠긴 폴더 아이콘" />
+                        </div>
+                        <span class="folder-name">Next Project...</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- [추가] 프로젝트 클릭 시 상세 내용을 보여줄 모달 -->
+               <div class="project-modal">
+                  <div class="modal-content">
+                     <button class="modal-close-btn">&times;</button>
+                     <!-- JS가 여기에 상세 내용을 채울 것입니다. -->
+                  </div>
+               </div>
+            </section>
+
+            <!-- Contact -->
+
+            <section id="contact" class="section" data-progress-color="#3498DB">
+               <h2>Contact</h2>
+            </section>
+         </main>
+      </div>
+
+      <script src="./js/main.js"></script>
+   </body>
+</html>
