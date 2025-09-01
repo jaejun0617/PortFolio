@@ -1,0 +1,308 @@
+/* reset.css 확장판 */
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 900;
+   font-display: swap;
+   src:
+      local('Pretendard Black'),
+      url(./woff2/Pretendard-Black.woff2) format('woff2'),
+      url(./woff/Pretendard-Black.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 800;
+   font-display: swap;
+   src:
+      local('Pretendard ExtraBold'),
+      url(./woff2/Pretendard-ExtraBold.woff2) format('woff2'),
+      url(./woff/Pretendard-ExtraBold.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 700;
+   font-display: swap;
+   src:
+      local('Pretendard Bold'),
+      url(./woff2/Pretendard-Bold.woff2) format('woff2'),
+      url(./woff/Pretendard-Bold.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 600;
+   font-display: swap;
+   src:
+      local('Pretendard SemiBold'),
+      url(./woff2/Pretendard-SemiBold.woff2) format('woff2'),
+      url(./woff/Pretendard-SemiBold.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 500;
+   font-display: swap;
+   src:
+      local('Pretendard Medium'),
+      url(./woff2/Pretendard-Medium.woff2) format('woff2'),
+      url(./woff/Pretendard-Medium.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 400;
+   font-display: swap;
+   src:
+      local('Pretendard Regular'),
+      url(./woff2/Pretendard-Regular.woff2) format('woff2'),
+      url(./woff/Pretendard-Regular.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 300;
+   font-display: swap;
+   src:
+      local('Pretendard Light'),
+      url(./woff2/Pretendard-Light.woff2) format('woff2'),
+      url(./woff/Pretendard-Light.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 200;
+   font-display: swap;
+   src:
+      local('Pretendard ExtraLight'),
+      url(./woff2/Pretendard-ExtraLight.woff2) format('woff2'),
+      url(./woff/Pretendard-ExtraLight.woff) format('woff');
+}
+
+@font-face {
+   font-family: 'Pretendard';
+   font-weight: 100;
+   font-display: swap;
+   src:
+      local('Pretendard Thin'),
+      url(./woff2/Pretendard-Thin.woff2) format('woff2'),
+      url(./woff/Pretendard-Thin.woff) format('woff');
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+   border: 0;
+   font-size: 62.5%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+   display: block;
+}
+
+body {
+   line-height: 1;
+   background: #fff;
+   color: #000;
+   font-family: 'Pretendard', sans-serif;
+}
+
+ol,
+ul,
+li {
+   list-style: none;
+}
+
+blockquote,
+q {
+   quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+/* 이미지 관련 */
+img {
+   max-width: 100%;
+   height: auto;
+   display: block;
+   border-style: none;
+}
+
+/* a 태그 기본 스타일 */
+a {
+   background-color: transparent;
+   color: inherit;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/* 버튼, input 기본 스타일 제거 */
+button,
+input,
+select,
+textarea {
+   font-family: inherit;
+   line-height: 1.15;
+   margin: 0;
+   border: none;
+   background: none;
+   color: inherit;
+   outline: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   appearance: none;
+}
+
+/* 버튼 커서 */
+button,
+[type='button'],
+[type='submit'],
+[type='reset'] {
+   cursor: pointer;
+}
+
+/* form 요소 정렬 */
+fieldset {
+   border: none;
+   margin: 0;
+   padding: 0;
+}
+
+/* hr 기본 스타일 초기화 */
+hr {
+   border: 0;
+   border-top: 1px solid #ccc;
+   margin: 1em 0;
+   padding: 0;
+}
+
+/* 코드, pre 스타일 */
+code,
+kbd,
+pre,
+samp {
+   font-family: monospace, monospace;
+   font-size: 1em;
+}
+
+/* 숨김 요소 */
+.hidden {
+   display: none !important;
+}
+
+/* 유저 셀렉트 방지 (필요 시) */
+.no-select {
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+}

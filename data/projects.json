@@ -1,42 +1,100 @@
 [
    {
-      "id": "netflix-clone",
-      "title": "Netflix UI/UX Renewal",
-      "mainImage": "../assets/images/project-netflix/NetFlix.png",
-      "description": "Swiper.js와 GSAP를 활용하여 기존 넷플릭스 UI에 동적인 애니메이션과 사용자 경험을 더한 클론 코딩 프로젝트입니다.",
+      "imgSrc": "./assets/images/project-the-select/The-select.png",
+      "title": "THE SELECT",
+      "headline": "바닐라 JS로 구현한 동적 이커머스 프론트엔드",
+      "overview": "Vanilla JS의 fetch API와 DOM 조작을 통해 SPA의 핵심 원리를 학습한 이커머스 프로젝트입니다. 비동기적으로 받아온 JSON 데이터를 기반으로 상품 목록을 동적으로 생성하고, 사용자의 인터랙션에 따라 UI를 실시간으로 업데이트하는 상태 관리 로직을 직접 구현했습니다.",
       "features": [
-         "Swiper.js를 활용한 자동 재생 배너 슬라이더",
-         "JSON 데이터 연동, 장르별 Top 10 동적 로딩 탭 메뉴",
-         "GSAP ScrollToPlugin을 이용한 부드러운 스크롤 UX"
+         {
+            "name": "동적 상품 렌더링",
+            "tech": ["fetch API", "async/await", "JSON", "map/filter/slice"],
+            "desc": "서버(JSON)의 데이터를 비동기적으로 가져와, 데이터 기반으로 UI를 구축하는 방식을 이해했습니다."
+         },
+         {
+            "name": "다중 필터링 & 페이지네이션",
+            "tech": ["Event Delegation", "URLSearchParams", "Array.slice()"],
+            "desc": "다중 조건에 따라 상품 목록을 실시간으로 필터링하고, 클라이언트 사이드 페이지네이션을 직접 구현했습니다."
+         },
+         {
+            "name": "상세 정보 모달 & 장바구니",
+            "tech": ["DOM API", "localStorage", "JSON.stringify/parse"],
+            "desc": "localStorage를 활용하여 브라우저 세션 간에 유지되는 장바구니 기능을 구현하며 클라이언트 사이드 상태 관리를 익혔습니다."
+         },
+         {
+            "name": "인터랙티브 UI/UX",
+            "tech": ["GSAP", "Swiper.js", "CSS Transitions"],
+            "desc": "GSAP, Swiper 등 외부 라이브러리를 커스터마이징하고, 다양한 마이크로 인터랙션을 적용하여 사용자 경험을 향상시켰습니다."
+         }
       ],
-      "techStack": ["HTML", "CSS", "JavaScript", "Swiper.js", "GSAP"],
-      "liveUrl": "https://jaejun0617.github.io/Netflix-Clone-Renewal/",
-      "githubUrl": "https://github.com/jaejun0617/Netflix-Clone-Renewal"
+      "links": {
+         "github": "https://github.com/jaejun0617",
+         "site": "https://the-select-jaejun.netlify.app/"
+      }
    },
    {
-      "id": "apple-clone",
-      "title": "Apple UI/UX Renewal",
-      "description": "Intersection Observer와 GSAP를 중심으로, 사용자의 스크롤과 마우스 움직임에 반응하는 인터랙티브 포트폴리오 웹사이트입니다.",
+      "imgSrc": "./assets/images/project-netflix/NetFlix.png",
+      "title": "NetFlix 클론코딩",
+      "headline": "React와 외부 API를 활용한 영화 정보 사이트",
+      "overview": "React 프레임워크와 TMDB API를 연동하여 만든 영화 정보 사이트입니다. 비동기 데이터 처리, 컴포넌트 기반 아키텍처, 그리고 상태 관리에 대한 깊은 이해를 얻었습니다.",
       "features": [
-         "Intersection Observer 기반 스크롤 애니메이션",
-         "GSAP ScrollTrigger를 활용한 고급 인터랙션",
-         "다크/라이트 모드 테마 전환 기능"
+         {
+            "name": "API 연동",
+            "tech": ["React", "axios", "TMDB API"],
+            "desc": "axios를 이용해 외부 영화 데이터 API를 호출하고, 비동기적으로 받아온 데이터를 화면에 렌더링했습니다."
+         },
+         {
+            "name": "컴포넌트 기반 개발",
+            "tech": ["React Hooks(useState, useEffect)"],
+            "desc": "UI를 재사용 가능한 컴포넌트 단위로 분리하여 개발하고, Hooks를 통해 상태와 생명주기를 관리했습니다."
+         }
       ],
-      "techStack": ["HTML", "CSS", "JavaScript", "GSAP"],
-      "liveUrl": "#",
-      "githubUrl": "#"
+      "links": {
+         "github": "https://github.com/jaejun0617/react-netflix-app",
+         "site": "https://react-netflix-app-jaejun.netlify.app/"
+      }
    },
    {
-      "id": "youtube-clone",
-      "title": "youtube UI/UX Renewal",
-      "description": "Intersection Observer와 GSAP를 중심으로, 사용자의 스크롤과 마우스 움직임에 반응하는 인터랙티브 포트폴리오 웹사이트입니다.",
+      "imgSrc": "./assets/images/project-apple/apple.png",
+      "title": "Apple 클론코딩",
+      "headline": "스크롤 기반의 인터랙티브 웹 애니메이션",
+      "overview": "Apple의 제품 소개 페이지를 클론하며, 사용자의 스크롤에 반응하는 복잡하고 미려한 인터랙티브 애니메이션을 구현하는 데 집중했습니다.",
       "features": [
-         "Intersection Observer 기반 스크롤 애니메이션",
-         "GSAP ScrollTrigger를 활용한 고급 인터랙션",
-         "다크/라이트 모드 테마 전환 기능"
+         {
+            "name": "스크롤 트리거 애니메이션",
+            "tech": ["GSAP", "ScrollTrigger"],
+            "desc": "GSAP의 ScrollTrigger 플러그인을 사용하여 스크롤 위치에 따라 요소의 크기, 위치, 투명도 등이 동적으로 변하는 애니메이션을 구현했습니다."
+         },
+         {
+            "name": "고성능 렌더링",
+            "tech": ["will-change", "transform"],
+            "desc": "GPU 가속을 활용하는 CSS 속성을 사용하여 수많은 요소가 움직여도 부드러운 애니메이션 성능을 확보했습니다."
+         }
       ],
-      "techStack": ["HTML", "CSS", "JavaScript", "GSAP"],
-      "liveUrl": "#",
-      "githubUrl": "#"
+      "links": {
+         "github": "https://github.com/jaejun0617/Apple-clone",
+         "site": "https://apple-clone-jaejun.netlify.app/"
+      }
+   },
+   {
+      "imgSrc": "./assets/images/project-youtube/youtube.png",
+      "title": "Youtube 클론코딩",
+      "headline": "복잡한 레이아웃과 컴포넌트 구조 설계",
+      "overview": "Youtube의 메인 페이지와 동영상 플레이어의 복잡한 레이아웃을 클론하며, 컴포넌트를 체계적으로 구성하고 관리하는 능력을 길렀습니다.",
+      "features": [
+         {
+            "name": "그리드/플렉스 레이아웃",
+            "tech": ["CSS Grid", "Flexbox"],
+            "desc": "다양한 화면 크기에 대응하는 반응형 레이아웃을 CSS Grid와 Flexbox를 조합하여 효율적으로 구축했습니다."
+         },
+         {
+            "name": "데이터 모킹",
+            "tech": ["JavaScript Objects"],
+            "desc": "실제 API 없이도 UI 개발을 진행할 수 있도록, JavaScript 객체를 이용해 동영상 데이터를 모킹(mocking)하여 사용했습니다."
+         }
+      ],
+      "links": {
+         "github": "https://github.com/jaejun0617/Youtube-clone",
+         "site": "https://youtube-clone-jaejun.netlify.app/"
+      }
    }
 ]

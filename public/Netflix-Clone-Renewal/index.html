@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- [CSS 파일 로드] -->
+      <script src="./js/main.js" defer></script>
+      <!-- 기본 스타일을 초기화 (reset.css) -->
+      <link rel="stylesheet" href="./css/reset.css" />
+      <!--메인 스타일 시트 (style.css) -->
+      <link rel="stylesheet" href="./css/style.css" />
+      <!--스와이퍼 css -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+      <!-- [JavaScript 라이브러리 로드] -->
+      <!-- GSAP: 부드러운 애니메이션 효과를 위한 라이브러리 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+      <!-- GSAP ScrollToPlugin: 특정 요소로 스크롤하는 애니메이션을 위한 플러그인 -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+      <!-- Font Awesome: 아이콘(검색, 알림 등)을 사용하기 위한 라이브러리 -->
+      <script src="https://kit.fontawesome.com/51a1670f78.js" crossorigin="anonymous"></script>
+      <!-- 스와이퍼 JS -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+      <!-- [메인 JavaScript 파일 로드] -->
+
+      <title>넷플릭스-클론-리뉴얼</title>
+   </head>
+   <body>
+      <!-- 전체 페이지를 감싸는 최상위 컨테이너 -->
+      <div class="container">
+         <!-- =================================================================
+      HEADER: 상단 고정 헤더 영역
+      ================================================================= -->
+         <header>
+            <nav>
+               <div class="logo">
+                  <a href="#">
+                     <img src="./assets/images/logo/Netflix_Logo.png" alt="넷플릭스 로고" />
+                  </a>
+               </div>
+               <ul>
+                  <li><a href="#">홈</a></li>
+                  <li><a href="#">시리즈</a></li>
+                  <li><a href="#">영화</a></li>
+                  <li><a href="#">게임</a></li>
+                  <li><a href="#">New! 요즘 대세 콘텐츠</a></li>
+                  <li><a href="#">내가 찜한 리스트</a></li>
+                  <li><a href="#">언어별로 찾아보기</a></li>
+               </ul>
+            </nav>
+            <div class="icons_box">
+               <div class="search_icon">
+                  <img src="./assets/icons/fffseach.png" alt="검색" />
+               </div>
+               <div class="notice_icon">
+                  <img src="./assets/icons/fffnotice.png" alt="알림" />
+               </div>
+               <div class="profile_icon">
+                  <img src="./assets/icons/profile.png" alt="내 프로필" />
+               </div>
+               <button type="button" class="hamburger_btn" aria-label="메뉴 열기">
+                  <i class="fas fa-bars"></i>
+                  <i class="fas fa-times"></i>
+               </button>
+            </div>
+         </header>
+
+         <!-- =================================================================
+         SECTION 1: BANNER (Swiper.js 자동 슬라이더)
+         ================================================================= -->
+         <section class="banner_container section">
+            <!-- Swiper.js 마크업 -->
+            <div class="swiper main-banner-swiper">
+               <!-- [핵심] 모든 슬라이드를 감싸는 Wrapper -->
+               <div class="swiper-wrapper">
+                  <!-- 슬라이드 1: 쥬라기 공원 -->
+                  <div class="swiper-slide">
+                     <!-- 배경 이미지 -->
+                     <img src="./assets/images/sliderImage/slidebg01.webp" class="slide-background" />
+                     <!-- 텍스트 콘텐츠 오버레이 -->
+                     <div class="banner_content">
+                        <h2 class="banner_headline">경험하라, 상상이 현실이 되는 순간</h2>
+                        <p class="banner_subheadline">화면을 압도하는 거대한 스케일, 멈출 수 없는 전율을 느껴보세요.</p>
+                        <a href="#" class="cta_button m_btn">지금 바로 모험 시작</a>
+                     </div>
+                  </div>
+
+                  <!-- 슬라이드 2: 해리 포터 -->
+                  <div class="swiper-slide">
+                     <img src="./assets/images/sliderImage/slidebg02.webp" class="slide-background" />
+                     <div class="banner_content">
+                        <h2 class="banner_headline">일상의 끝, 새로운 세계의 시작</h2>
+                        <p class="banner_subheadline">당신이 꿈꿔온 마법 같은 이야기가 바로 여기, 당신을 기다립니다.</p>
+                        <a href="#" class="cta_button m_btn">마법의 세계로</a>
+                     </div>
+                  </div>
+
+                  <!-- 슬라이드 3: 아바타 -->
+                  <div class="swiper-slide">
+                     <img src="./assets/images/sliderImage/slidebg.jpg" class="slide-background" />
+                     <div class="banner_content">
+                        <h2 class="banner_headline">영화를 넘어, 하나의 경험으로</h2>
+                        <p class="banner_subheadline">전 세계가 열광한 경이로운 세계를 직접 확인하세요.</p>
+                        <a href="#" class="cta_button m_btn">판도라 탐험하기</a>
+                     </div>
+                  </div>
+
+                  <!-- 슬라이드 4: 타이타닉 -->
+                  <div class="swiper-slide">
+                     <img src="./assets/images/sliderImage/slidebg03.webp" class="slide-background" />
+                     <div class="banner_content">
+                        <h2 class="banner_headline">시간이 흘러도 잊히지 않을</h2>
+                        <p class="banner_subheadline">역사상 가장 위대한 감동을 다시 한번 경험하세요.</p>
+                        <a href="#" class="cta_button m_btn">전설 다시 보기</a>
+                     </div>
+                  </div>
+
+                  <!-- 슬라이드 5: 지브리 애니메이션 (라이온킹 대체) -->
+                  <div class="swiper-slide">
+                     <img src="./assets/images/sliderImage/slidebg04.webp" class="slide-background" />
+                     <div class="banner_content">
+                        <h2 class="banner_headline">세대를 넘어, 모두의 가슴속에</h2>
+                        <p class="banner_subheadline">잊고 있던 감동이, 다시 한번 당신을 찾아옵니다.</p>
+                        <a href="#" class="cta_button m_btn">추억 속으로 다시 한번</a>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Swiper 기본 네비게이션 버튼 -->
+               <div class="swiper-button-next"></div>
+               <div class="swiper-button-prev"></div>
+
+               <!-- Swiper 페이징 버튼 (점 모양) -->
+               <div class="swiper-pagination"></div>
+
+               <!-- [핵심] 커스텀 재생/정지 버튼 -->
+               <div class="swiper-autoplay-control">
+                  <button type="button" id="autoplay-toggle" aria-label="자동재생 정지">
+                     <i class="fas fa-pause"></i>
+                     <!-- 정지 아이콘 (기본) -->
+                     <i class="fas fa-play"></i>
+                     <!-- 재생 아이콘 (숨김) -->
+                  </button>
+               </div>
+            </div>
+         </section>
+
+         <!-- =================================================================
+      SECTION 2: CATEGORY 
+      ================================================================= -->
+         <section class="category_container section">
+            <div class="category_bg section-bg"></div>
+            <div class="category_inner">
+               <h2 class="section-title">대한민국 역대 시리즈</h2>
+               <p class="section-subtitle">대한민국이 열광하는 오늘의 대세 시리즈, 놓치지 마세요.</p>
+            </div>
+            <div class="category_menu">
+               <nav>
+                  <ul>
+                     <li><a href="#" class="active" data-category="all">전체</a></li>
+                     <li><a href="#" data-category="romance">로맨스</a></li>
+                     <li><a href="#" data-category="action">액션</a></li>
+                     <li><a href="#" data-category="comedy">코미디</a></li>
+                     <li><a href="#" data-category="thriller">스릴러</a></li>
+                     <li><a href="#" data-category="horror">공포</a></li>
+                     <li><a href="#" data-category="fantasy">판타지</a></li>
+                     <li><a href="#" data-category="animation">애니메이션</a></li>
+                     <li><a href="#" data-category="sf">SF</a></li>
+                     <li><a href="#" data-category="crime">범죄</a></li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="category_gallery">
+               <!-- JSON 데이터가 이곳에 렌더링됩니다. -->
+            </div>
+            <button type="button" class="show_more_btn">더보기</button>
+         </section>
+
+         <!-- =================================================================
+      SECTION 3: CLASSIC (누구나 사랑하는 명작)
+      ================================================================= -->
+         <section class="classic_container section">
+            <div class="classic_bg section-bg"></div>
+            <div class="classic_inner">
+               <h2 class="section-title">누구나 사랑하는 명작</h2>
+               <p class="section-subtitle">시간이 지나도 변치 않는 감동, 다시 한번 느껴보세요.</p>
+            </div>
+            <div class="classic_content">
+               <div class="classic_movies">
+                  <!-- JSON 데이터가 이곳에 렌더링됩니다. -->
+               </div>
+            </div>
+         </section>
+
+         <!-- =================================================================
+      SECTION 4: GAME SLIDER (게임 무한 슬라이더)
+      ================================================================= -->
+         <section class="game_container section">
+            <div class="game_bg section-bg"></div>
+            <div class="game_inner">
+               <h2 class="section-title">회원님을 위한 인기 모바일 게임</h2>
+               <p class="section-subtitle">넷플릭스 회원이라면 이 모든 게임을 무료로 즐길 수 있습니다.</p>
+            </div>
+            <div class="game_content">
+               <div class="game_gallery">
+                  <!-- JSON 데이터가 이곳에 렌더링됩니다. -->
+               </div>
+            </div>
+            <div class="slider-controls">
+               <button type="button" class="slide_left_btn" aria-label="이전 슬라이드">
+                  <img src="./assets/icons/left-fff.png" alt="왼쪽 화살표" />
+               </button>
+               <button type="button" class="slide_right_btn" aria-label="다음 슬라이드">
+                  <img src="./assets/icons/right-fff.png" alt="오른쪽 화살표" />
+               </button>
+            </div>
+         </section>
+
+         <!-- =================================================================
+      SECTION 5: MEMBERSHIP (멤버십 가입 유도)
+      ================================================================= -->
+         <section class="membership_container section">
+            <div class="membership_bg section-bg"></div>
+            <div class="memberships_header">
+               <h2 class="section-title">세상의 모든 이야기를, 당신의 화면 속으로</h2>
+               <p class="section-subtitle">가입하면 지금 바로 무제한 시청 가능</p>
+            </div>
+            <div class="benefits_grid">
+               <div class="benefit_card">
+                  <div class="benefit_icon"><i class="fas fa-infinity"></i></div>
+                  <h3 class="benefit_title">광고 없는 무제한 스트리밍</h3>
+               </div>
+               <div class="benefit_card">
+                  <div class="benefit_icon"><i class="fas fa-tv"></i></div>
+                  <h3 class="benefit_title">최신작부터 명작까지 한 곳에서</h3>
+               </div>
+               <div class="benefit_card">
+                  <div class="benefit_icon"><i class="fas fa-mobile-alt"></i></div>
+                  <h3 class="benefit_title">모바일, TV, 태블릿에서 끊김 없이</h3>
+               </div>
+               <div class="benefit_card">
+                  <div class="benefit_icon"><i class="fas fa-download"></i></div>
+                  <h3 class="benefit_title">다운로드로 오프라인에서도 시청</h3>
+               </div>
+            </div>
+            <div class="plans_table_container">
+               <div class="charge plan-ad-standard">
+                  <div class="plan_header">
+                     <h3>광고형 스탠다드</h3>
+                     <p class="price">월 5,500원</p>
+                  </div>
+                  <div class="plan_details">
+                     <ul>
+                        <li><span>1080p Full HD 화질</span></li>
+                        <li><span>일부 광고와 함께 시청</span></li>
+                        <li><span>동시 접속 2명</span></li>
+                        <li><span>콘텐츠 저장 불가</span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="charge plan-standard recommended">
+                  <div class="recommended_badge">추천</div>
+                  <div class="plan_header">
+                     <h3>스탠다드</h3>
+                     <p class="price">월 13,500원</p>
+                  </div>
+                  <div class="plan_details">
+                     <ul>
+                        <li><span>1080p Full HD 화질</span></li>
+                        <li><span>광고 없이 무제한 시청</span></li>
+                        <li><span>동시 접속 2명</span></li>
+                        <li><span>콘텐츠 저장 2대</span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="charge plan-premium">
+                  <div class="plan_header">
+                     <h3>프리미엄</h3>
+                     <p class="price">월 17,000원</p>
+                  </div>
+                  <div class="plan_details">
+                     <ul>
+                        <li><span>4K UHD + HDR 화질</span></li>
+                        <li><span>공간 음향 지원</span></li>
+                        <li><span>동시 접속 4명</span></li>
+                        <li><span>콘텐츠 저장 6대</span></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="final_cta">
+               <h2 class="final_prompt section-title">오늘 가입하고, 오늘 밤 정주행 시작</h2>
+               <button type="button" class="cta_button cta_button_final">멤버십 가입</button>
+               <p class="no_commitment_text">약정 없이 언제든지 해지할 수 있습니다.</p>
+            </div>
+         </section>
+         <footer>
+            <p>
+               © 2025 재준. 본 페이지는 상업적 목적이 아닌 포트폴리오 용도로 제작되었습니다.<br />
+               Netflix의 상표 및 로고는 Netflix, Inc.의 자산이며, 본 사이트와는 무관합니다.
+            </p>
+         </footer>
+      </div>
+
+      <!-- Initialize Swiper -->
+      <script>
+         const swiper = new Swiper('.main-banner-swiper', {
+            spaceBetween: 0,
+            effect: 'fade',
+            fadeEffect: {
+               crossFade: true,
+            },
+            loop: true,
+
+            autoplay: {
+               delay: 5000,
+               disableOnInteraction: false,
+               pauseOnMouseEnter: true,
+            },
+
+            navigation: {
+               nextEl: '.swiper-button-next',
+               prevEl: '.swiper-button-prev',
+            },
+
+            pagination: {
+               el: '.swiper-pagination',
+               clickable: true,
+            },
+         });
+
+         const autoplayButton = document.querySelector('#autoplay-toggle');
+
+         autoplayButton.addEventListener('click', () => {
+            if (swiper.autoplay.running) {
+               swiper.autoplay.stop();
+               autoplayButton.classList.add('paused');
+               autoplayButton.setAttribute('aria-label', '자동재생 시작');
+            } else {
+               swiper.autoplay.start();
+               autoplayButton.classList.remove('paused');
+               autoplayButton.setAttribute('aria-label', '자동재생 정지');
+            }
+         });
+      </script>
+   </body>
+</html>

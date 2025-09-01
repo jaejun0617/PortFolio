@@ -1,14 +1,17 @@
 /* layout.css */
 
-/* --- Page & Splash Screen Layout --- */
+/* =================================================================
+   ✅ 1. 페이지 전체 레이아웃 및 스크롤 설정
+================================================================= */
+
+/* 🔹 스크롤의 주체가 되는 메인 컨테이너 */
 .page-wrapper {
-   opacity: 0;
-} /* JS가 제어할 초기 상태 */
-.page-wrapper.visible {
-   opacity: 1;
-   transition: opacity 1s ease;
+   height: 100vh;
+   overflow-y: scroll;
+   scroll-snap-type: y mandatory;
 }
 
+/* 🔹 인트로 스플래시 스크린 레이아웃 */
 .splash-screen {
    position: fixed;
    top: 0;
@@ -25,12 +28,12 @@
       opacity 1s ease,
       visibility 1s ease;
 }
-.splash-screen.hidden {
-   opacity: 0;
-   visibility: hidden;
-}
 
-/* --- Header, Side Nav, Progress Bar Layout --- */
+/* =================================================================
+   ✅ 2. 고정 UI 요소 레이아웃 (헤더, 사이드바, 진행 바)
+================================================================= */
+
+/* 🔹 헤더 및 진행 바 공통 위치 */
 .main-header,
 .progress-bar {
    position: fixed;
@@ -39,21 +42,19 @@
    width: 100%;
    z-index: 1000;
 }
+
+/* 🔹 메인 헤더 레이아웃 */
 .main-header {
-   padding: 20px 40px;
    display: flex;
    justify-content: space-between;
    align-items: center;
-   /* [추가] 부드러운 등장을 위한 초기 상태 */
-   opacity: 0;
-   transform: translateY(-100%);
    transition: all 0.8s ease 0.5s;
-}
-.main-header.visible {
-   opacity: 1;
-   transform: translateY(0);
+   padding: 0rem 2rem;
+
+   height: 5vh;
 }
 
+/* 🔹 사이드 네비게이션 레이아웃 */
 .side-nav {
    position: fixed;
    top: 50%;
@@ -66,11 +67,14 @@
    text-align: right;
 }
 
-/* --- Section Containers Layout --- */
+/* =================================================================
+   ✅ 3. 메인 콘텐츠 섹션 레이아웃
+================================================================= */
+
+/* 🔹 모든 섹션의 공통 레이아웃 */
 .section {
    width: 100%;
    min-height: 100vh;
-   padding: 100px 5rem;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -78,95 +82,68 @@
    background-repeat: no-repeat;
    background-position: center center;
    background-size: cover;
-   position: relative; /* 오버레이를 위한 기준점 */
+   position: relative;
+   scroll-snap-align: start;
 }
 
-/* 
-  [핵심] 모든 섹션의 상단과 하단에
-  배경색과 동일한 색상의 그라데이션 오버레이를 추가합니다.
-*/
+/* 🔹 섹션 상/하단 그라데이션 오버레이 */
 .section::before,
 .section::after {
    content: '';
    position: absolute;
    left: 0;
    width: 100%;
-   height: 150px; /* 그라데이션의 높이 */
-   pointer-events: none; /* 마우스 이벤트를 통과시킴 */
-   z-index: 2; /* 텍스처 배경보다는 위에, 콘텐츠보다는 아래에 */
-}
-
-/* 상단 그라데이션: 투명 -> 불투명 */
-.section::before {
-   top: 0;
-   background: linear-gradient(to bottom, var(--section-bg-color) 0%, transparent 50%);
-}
-
-/* 하단 그라데이션: 불투명 -> 투명 */
-.section::after {
-   bottom: 0;
-   background: linear-gradient(to top, var(--section-bg-color) 0%, transparent 50%);
-}
-
-/* 실제 콘텐츠는 오버레이보다 위에 오도록 z-index를 설정해야 합니다. */
-.section > * {
-   position: relative;
+   height: 150px;
+   pointer-events: none;
    z-index: 2;
 }
+.section::before {
+   top: 0;
+   background: linear-gradient(to bottom, var(--bg-color) 0%, transparent 50%);
+}
+.section::after {
+   bottom: 0;
+   background: linear-gradient(to top, var(--bg-color) 0%, transparent 50%);
+}
 
-/* 각 섹션별 배경색 */
+/* 🔹 섹션 내부 콘텐츠 z-index 관리 */
+.section > * {
+   position: relative;
+   z-index: 3;
+}
+
+/* =================================================================
+   ✅ 4. 각 섹션별 고유 레이아웃 및 배경
+================================================================= */
+
+/* 🔹 각 섹션 배경 이미지 설정 */
 #hero {
-   user-select: none;
-   pointer-events: none;
    background-color: var(--bg-color);
 }
 #about {
-   user-select: none;
-   pointer-events: none;
    background-image: var(--about-bg-image);
 }
-
-/* --- SKILLS SECTION --- */
 #skills {
-   min-height: 100vh;
-   display: flex;
-   justify-content: center;
-   align-items: center;
    background-image: var(--skills-bg-image);
 }
+#contact {
+   background-image: var(--contact-bg-image);
+}
+
+/* 🔹 Skills 섹션 내부 레이아웃 */
 .code-editor {
    width: 80%;
    max-width: 800px;
-
    border-radius: 10px;
    overflow: hidden;
-   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 20px 50px var(--shadow-color);
 }
 .editor-header {
    padding: 10px;
    background: #333;
    display: flex;
    align-items: center;
-   border-radius: 10px;
-}
-.skills-dot {
-   width: 12px;
-   height: 12px;
-   border-radius: 50%;
-   margin: 0 4px;
-}
-.skills-dot.red {
-   background: #ff5f56;
-}
-.skills-dot.yellow {
-   background: #ffbd2e;
-}
-.skills-dot.green {
-   background: #27c93f;
-}
-.file-name {
-   color: #ccc;
-   margin-left: auto;
+   justify-content: space-between;
 }
 .editor-body {
    padding: 20px;
@@ -174,22 +151,29 @@
    min-height: 300px;
    color: var(--text-color);
 }
-#code-output::after {
-   content: '|';
-   animation: blink 1s step-end infinite;
+.editor-body code {
+   white-space: pre-wrap;
+   word-break: break-all;
+   display: block;
 }
-@keyframes blink {
-   50% {
-      opacity: 0;
-   }
-}
-
-#projects {
+/* 🔹 Projects 섹션 내부 레이아웃 */
+.scroll-magic-container {
+   height: 400vh;
+   width: 100%;
    background-image: var(--projects-bg-image);
 }
 
-#contact {
-   user-select: none;
-   pointer-events: none;
-   background-image: var(--contact-bg-image);
+/* 🔹 Contact 섹션 내부 레이아웃 */
+.contact-container {
+   width: 100%;
+   max-width: 700px;
+   display: flex;
+   justify-content: center;
+   gap: 4rem;
+   background: var(--section-bg-color);
+   padding: 4rem;
+   border-radius: 20px;
+   border: 1px solid var(--border-color);
+   box-shadow: 0 15px 40px var(--shadow-color);
+   margin: 0 auto;
 }

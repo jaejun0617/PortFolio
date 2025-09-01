@@ -3,22 +3,33 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>"The Developer's Desk" - 당신의 작업 공간으로의 초대</title>
-      <!-- CSS 파일 로드 순서 -->
+
+      <!-- ✅ 포트폴리오 타이틀: 브라우저 탭에 표시될 페이지의 제목입니다. -->
+      <title>신재준 | 인터랙티브 프론트엔드 포트폴리오</title>
+
+      <!-- ✅ CSS 파일 로드 순서: 스타일 시트는 순차적으로 적용되므로, 의존성 순서에 맞게 로드하는 것이 중요합니다. -->
       <link rel="stylesheet" href="./css/reset.css" />
-      <!-- 1. 초기화 -->
-      <link rel="stylesheet" href="./css/common.css" />
-      <!-- 2. 전역 규칙 -->
-      <link rel="stylesheet" href="./css/layout.css" />
-      <!-- 3. 페이지 뼈대 -->
-      <link rel="stylesheet" href="./css/components.css" />
-      <!-- 4. 세부 디자인 -->
+      <!-- 1. 초기화: 브라우저 기본 스타일을 제거하여 일관된 디자인을 유지합니다. -->
       <link rel="stylesheet" href="./css/variables.css" />
+      <!-- 2. CSS 변수: 사이트 전체에서 사용될 색상, 폰트 등의 변수를 정의합니다. (가장 먼저 로드) -->
+      <link rel="stylesheet" href="./css/common.css" />
+      <!-- 3. 전역 규칙: 버튼, 입력창 등 사이트 전반에 공통으로 적용될 스타일을 정의합니다. -->
+      <link rel="stylesheet" href="./css/layout.css" />
+      <!-- 4. 페이지 뼈대: header, section 등 페이지의 전체적인 구조와 레이아웃을 설정합니다. -->
+      <link rel="stylesheet" href="./css/components.css" />
+      <!-- 5. 세부 디자인: 각 섹션의 구체적인 디자인과 컴포넌트 스타일을 정의합니다. -->
+      <link rel="stylesheet" href="./css/responsive.css" />
+      <!-- 6. 반응형: 다양한 화면 크기(모바일, 태블릿 등)에 대응하기 위한 스타일을 정의합니다. (가장 마지막) -->
+
+      <!-- ✅ 외부 라이브러리 로드: 스크롤 애니메이션 효과를 위한 AOS 라이브러리 CSS를 불러옵니다. -->
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
    </head>
-   <body>
+   <body style="overflow-x: hidden">
       <!-- =================================================================
-     [추가] 인트로 스플래시 스크린
-    ================================================================== -->
+         ✅ 1. 인트로 스플래시 스크린
+         - 사이트 첫 방문 시 강렬한 첫인상을 주는 애니메이션 영역입니다.
+         - 로딩이 완료되면 JavaScript에 의해 사라집니다.
+      ================================================================== -->
       <div class="splash-screen">
          <div class="lock-pattern-container">
             <div class="dot"></div>
@@ -30,29 +41,42 @@
             <div class="dot"></div>
             <div class="dot"></div>
             <div class="dot"></div>
-
             <svg class="line-canvas" width="100%" height="100%"></svg>
          </div>
          <p class="splash-text">UNLOCKING CREATIVITY...</p>
       </div>
 
       <!-- =================================================================
-     [수정] 전체 콘텐츠를 감싸는 래퍼
-    ================================================================== -->
+         ✅ 2. 전체 콘텐츠 래퍼
+         - 스크롤 스냅 기능의 부모 컨테이너 역할을 합니다.
+         - 각 섹션이 화면에 딱 맞게 스크롤되도록 제어하는 기준점이 됩니다.
+      ================================================================== -->
       <div class="page-wrapper">
-         <!-- 스크롤 진행 바 -->
+         <!-- 🔹 스크롤 진행 바: 사용자의 스크롤 위치를 시각적으로 보여주는 UI 요소입니다. -->
          <div class="progress-bar"></div>
 
-         <!-- [추가] 일반적인 상단 헤더 -->
+         <!-- =================================================================
+            ✅ 3. 고정 UI 요소
+            - 사용자가 스크롤하더라도 항상 화면의 특정 위치에 고정되어 있는 인터페이스 영역입니다.
+         ================================================================== -->
+
+         <!-- 🔹 상단 헤더: 로고, 외부 링크(Github, Notion) 및 다크/라이트 모드 테마 전환 스위치를 포함합니다. -->
          <header class="main-header">
             <nav class="main-nav">
                <li class="logo">
                   <a href="#hero">
-                     <img src="./assets/images/main/header/main_profile.png" alt="내 프로플" />
+                     <img
+                        src="./assets/images/main/header/main_profile.png"
+                        alt="내 프로필"
+                     />
                   </a>
                </li>
                <li>
-                  <a class="nav-link" href="https://github.com/jaejun0617" target="_blank" rel="noopener noreferrer"
+                  <a
+                     class="nav-link"
+                     href="https://github.com/jaejun0617"
+                     target="_blank"
+                     rel="noopener noreferrer"
                      >Github</a
                   >
                </li>
@@ -66,9 +90,12 @@
                   >
                </li>
             </nav>
-            <!-- [추가] 다크 모드 토글 스위치 -->
             <div class="theme-switcher">
-               <input type="checkbox" id="theme-toggle" class="theme-toggle-checkbox" />
+               <input
+                  type="checkbox"
+                  id="theme-toggle"
+                  class="theme-toggle-checkbox"
+               />
                <label for="theme-toggle" class="theme-toggle-label">
                   <span class="sun">☀️</span>
                   <span class="moon">🌙</span>
@@ -76,153 +103,444 @@
             </div>
          </header>
 
-         <!-- 사이드 내비게이션 -->
+         <!-- 🔹 사이드 네비게이션: 각 섹션으로 빠르게 이동할 수 있는 메뉴이며, 현재 활성화된 섹션을 표시합니다. -->
          <aside class="side-nav">
             <ul>
-               <li><a href="#hero" class="nav-link scroll-link active">Home</a></li>
+               <li>
+                  <a href="#hero" class="nav-link scroll-link active">Home</a>
+               </li>
                <li><a href="#about" class="nav-link scroll-link">About</a></li>
-               <li><a href="#skills" class="nav-link scroll-link">Skills</a></li>
-               <li><a href="#projects" class="nav-link scroll-link">Projects</a></li>
-               <li><a href="#contact" class="nav-link scroll-link">Contact</a></li>
+               <li>
+                  <a href="#skills" class="nav-link scroll-link">Skills</a>
+               </li>
+               <li>
+                  <a href="#projects" class="nav-link scroll-link">Projects</a>
+               </li>
+               <li>
+                  <a href="#contact" class="nav-link scroll-link">Contact</a>
+               </li>
             </ul>
          </aside>
 
-         <!-- 메인 콘텐츠 영역 -->
+         <!-- =================================================================
+            ✅ 4. 메인 콘텐츠 영역
+            - 포트폴리오의 핵심 내용이 담기는 부분으로, 각 섹션으로 구성됩니다.
+         ================================================================== -->
          <main class="content-wrapper">
-            <!-- Home -->
-            <section id="hero" class="section" data-progress-color="#E74C3C">
-               <h1>OOO's PORTFOLIO</h1>
-            </section>
-
-            <!-- About -->
-            <section id="about" class="section" data-progress-color="#E67E22">
-               <h2>About Me</h2>
-            </section>
-
-            <!-- Skill -->
-            <section id="skills" class="section" data-progress-color="#2ECC71">
-               <div class="code-editor">
-                  <div class="editor-header">
-                     <span class="skills-dot red"></span><span class="skills-dot yellow"></span
-                     ><span class="skills-dot green"></span>
-                     <span class="file-name">my-skills.js</span>
-                  </div>
-                  <div class="editor-body">
-                     <pre><code id="code-output" class="language-javascript"></code></pre>
-                  </div>
-               </div>
-            </section>
-
-            <!-- Projects Section -->
-            <section id="projects" class="section" data-progress-color="#F1C40F">
-               <!-- 섹션 타이틀 -->
-               <div class="section-title">
-                  <h2>My Projects Workspace</h2>
-               </div>
-
-               <!-- 프로젝트 콘텐츠 전체를 감싸는 래퍼 -->
-               <div class="projects-wrapper">
-                  <!-- 1. 대표 프로젝트 (노트북) -->
-
-                  <div class="main-project-container">
-                     <div class="laptop-mockup">
-                        <div class="editor-header">
-                           <span class="skills-dot red"></span><span class="skills-dot yellow"></span
-                           ><span class="skills-dot green"></span>
-                        </div>
-                        <div class="laptop-screen">
+            <!-- 🔹 Home Section: 사용자가 처음 마주하는 메인 화면으로, 인터랙티브한 마키 효과와 타이핑 애니메이션으로 구성됩니다. -->
+            <section
+               id="hero"
+               class="section hero-marquee-section"
+               data-progress-color="#E74C3C"
+            >
+               <!-- 스플릿 마키 전체를 감싸는 컨테이너 -->
+               <div class="hero-marquee-container">
+                  <!-- 왼쪽 컬럼 (이미지) - 아래로 움직임 -->
+                  <div class="marquee-column">
+                     <div class="marquee-wrapper">
+                        <!-- 원본 아이템들 -->
+                        <div class="marquee-item">
                            <img
                               src="./assets/images/project-the-select/The-select.png"
-                              alt="THE SELECT 쇼핑몰 메인 이미지"
+                              alt="The Select Project"
+                           />
+                        </div>
+                        <div class="marquee-item">
+                           <img
+                              src="./assets/images/project-netflix/NetFlix.png"
+                              alt="Netflix Project"
+                           />
+                        </div>
+                        <div class="marquee-item">
+                           <img
+                              src="./assets/images/project-apple/apple.png"
+                              alt="Apple Project"
+                           />
+                        </div>
+                        <div class="marquee-item">
+                           <img
+                              src="./assets/images/project-youtube/youtube.png"
+                              alt="Youtube Project"
+                           />
+                        </div>
+                        <!-- (참고: 이 아래는 JS가 자동으로 복제본을 채워줄 거야) -->
+                     </div>
+                  </div>
+
+                  <!-- 오른쪽 컬럼 (코드) - 위로 움직임 -->
+                  <div class="marquee-column">
+                     <div class="marquee-wrapper">
+                        <!-- 원본 아이템들 -->
+                        <div class="marquee-item code-snippet">
+                           <img
+                              src="./assets/images/main/home/javascript.png"
+                              alt="HTML"
+                           />
+                        </div>
+                        <div class="marquee-item code-snippet">
+                           <img
+                              src="./assets/images/main/home/css.png"
+                              alt="CSS"
+                           />
+                        </div>
+                        <div class="marquee-item code-snippet">
+                           <img
+                              src="./assets/images/main/home/javascript.png"
+                              alt="JavaScript"
+                           />
+                        </div>
+                        <div class="marquee-item code-snippet">
+                           <img
+                              src="./assets/images/main/home/json.png"
+                              alt="JSON"
                            />
                         </div>
                      </div>
-                     <div class="project-info main-project-info">
-                        <!-- [핵심 수정!] 각 요소에 명확한 클래스 추가 -->
-                        <h3 class="project-title">THE SELECT - Luxury E-commerce</h3>
-                        <p class="project-description">기획부터 배포까지, 바닐라 JS로 구현한 반응형 쇼핑몰 프로젝트</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link-live" target="_blank">View Live</a>
-                           <a href="#" class="project-link-github" target="_blank">GitHub</a>
-                        </div>
-                     </div>
-                  </div>
-
-                  <!-- 2. 서브 프로젝트 (폴더들) -->
-                  <div class="sub-projects-container">
-                     <!-- 프로젝트 폴더 1 -->
-                     <div
-                        class="project-folder"
-                        data-project-id="netflix-clone"
-                        data-image-src="./assets/images/project-netflix/NetFlix.png"
-                     >
-                        <div class="folder-icon">
-                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
-                           <!-- 호버 시 나타날 미리보기 이미지 -->
-                           <div class="folder-preview">
-                              <img src="./assets/images/project-netflix/NetFlix.png" alt="넷플릭스 클론 미리보기" />
-                           </div>
-                        </div>
-                        <span class="folder-name">Netflix Clone</span>
-                     </div>
-
-                     <!-- 프로젝트 폴더 2 -->
-                     <div
-                        class="project-folder"
-                        data-project-id="apple-clone"
-                        data-image-src="./assets/images/project-apple/apple.png"
-                     >
-                        <div class="folder-icon">
-                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
-                           <div class="folder-preview">
-                              <img src="./assets/images/project-apple/apple.png" alt="포트폴리오 사이트 미리보기" />
-                           </div>
-                        </div>
-                        <span class="folder-name">Apple Site</span>
-                     </div>
-
-                     <!-- 프로젝트 폴더 3 -->
-                     <div
-                        class="project-folder"
-                        data-project-id="youtube-clone"
-                        data-image-src="./assets/images/project-youtube/youtube.png"
-                     >
-                        <div class="folder-icon">
-                           <img src="./assets/icons/folde.png" alt="폴더 아이콘" />
-                           <div class="folder-preview">
-                              <img src="./assets/images/project-youtube/youtube.png" alt="포트폴리오 사이트 미리보기" />
-                           </div>
-                        </div>
-                        <span class="folder-name">YouTube Site</span>
-                     </div>
-
-                     <!-- 프로젝트 폴더 4 (준비중) -->
-                     <div class="project-folder upcoming">
-                        <div class="folder-icon">
-                           <img src="./assets/icons/locked-folder.png" alt="잠긴 폴더 아이콘" />
-                        </div>
-                        <span class="folder-name">Next Project...</span>
-                     </div>
                   </div>
                </div>
+               <div class="hero-overlay"></div>
+               <!-- 중앙의 타이틀 (마키 위에 떠 있음) -->
+               <div class="hero-content">
+                  <div class="hero-profile">
+                     <img src="./assets/icons/emoji-profile.png" alt="" />
+                  </div>
+                  <h1 class="hero-title"></h1>
 
-               <!-- [추가] 프로젝트 클릭 시 상세 내용을 보여줄 모달 -->
-               <div class="project-modal">
-                  <div class="modal-content">
-                     <button class="modal-close-btn">&times;</button>
-                     <!-- JS가 여기에 상세 내용을 채울 것입니다. -->
+                  <!-- ✅ [핵심 수정] 부제(subtitle) 구조 변경: 키워드 부분이 동적으로 변경되는 타이핑 애니메이션을 위해 span 태그로 감쌌습니다. -->
+                  <p class="hero-subtitle">
+                     저는
+                     <span class="keyword-container">
+                        <span class="keyword"></span>
+                     </span>
+                     개발자 신재준입니다.
+                  </p>
+               </div>
+            </section>
+
+            <!-- 🔹 About Section: 개발자로서의 정체성과 성장 과정을 소개하는 영역입니다. -->
+            <section id="about" class="section" data-progress-color="#E67E22">
+               <div class="section-title">
+                  <h2>WHO I AM</h2>
+                  <p>배움을 즐기며, 더 나은 사용자 경험을 만들어가는 개발자.</p>
+               </div>
+
+               <!-- ✅ [핵심 수정] 전체 About 콘텐츠를 감싸는 컨테이너: 좌측의 프로필 카드와 우측의 개발 여정 타임라인으로 구성됩니다. -->
+               <div class="about-container">
+                  <!-- 🔹 왼쪽: 프로필 카드 - 기본 인적사항과 좌우명, 이력서/GitHub 링크를 제공합니다. -->
+                  <div class="about-profile-card">
+                     <div class="profile-image">
+                        <img
+                           src="./assets/images/main/about/profile.jpeg"
+                           alt="신재준 프로필 사진"
+                        />
+                     </div>
+                     <div class="profile-info">
+                        <h3>신재준</h3>
+                        <p class="job-title">Frontend Developer</p>
+                        <div class="quote-slider">
+                           <p class="quote-text"></p>
+                           <span class="quote-author"></span>
+                        </div>
+                     </div>
+                     <div class="profile-links">
+                        <a href="#" class="profile-btn resume">Resume</a>
+                        <a
+                           href="https://github.com/jaejun0617"
+                           target="_blank"
+                           class="profile-btn github"
+                           >GitHub</a
+                        >
+                     </div>
+                  </div>
+
+                  <!-- 🔹 오른쪽: 나의 개발 여정 (타임라인) - 개발에 입문하게 된 계기부터 미래의 포부까지를 단계별로 서술합니다. -->
+                  <div class="about-journey">
+                     <!-- 각 journey-item은 개발 성장 과정의 한 단계를 의미합니다. -->
+                     <div class="journey-item">
+                        <div class="journey-phase">Phase 1: The Spark</div>
+                        <h4 class="journey-title">
+                           "어떻게 만들었을까?" 라는 작은 호기심
+                        </h4>
+                        <p class="journey-text">
+                           처음엔 그저 멋진 웹사이트를 보는 게 좋았습니다.
+                           그러다 문득 '이건 어떻게 움직이는 걸까?'라는 호기심이
+                           생겼고, F12 개발자 도구를 열어본 그날부터 코드의
+                           세계에 빠져들게 되었습니다. 눈에 보이는 디자인이
+                           논리적인 코드로 구현되는 과정은 제게 새로운 놀이와
+                           같았습니다.
+                        </p>
+                     </div>
+
+                     <div class="journey-item">
+                        <div class="journey-phase">Phase 2: The Foundation</div>
+                        <h4 class="journey-title">
+                           매일의 꾸준함으로 쌓아 올린 기본기
+                        </h4>
+                        <p class="journey-text">
+                           매일 마주하는 작은 문제들을 해결하며 기본기를 다졌고,
+                           특히 순수 JavaScript만으로 프로젝트를 완성해 보며
+                           데이터와 UI의 상호작용을 깊이 이해할 수 있었습니다.
+                           막혔던 기능이 마침내 눈앞에서 구현되었을 때의 희열은,
+                           지금도 저를 계속 나아가게 하는 가장 큰 원동력입니다.
+                        </p>
+                     </div>
+
+                     <div class="journey-item">
+                        <div class="journey-phase">Phase 3: The Insight</div>
+                        <h4 class="journey-title">
+                           코드를 넘어, 사용자를 생각하기 시작하다
+                        </h4>
+                        <p class="journey-text">
+                           코드를 작성하는 시간이 길어질수록, 기술 자체보다
+                           중요한 것은 '이 기술을 사용하는 사람은 어떨까'라는
+                           것을 깨닫게 되었습니다. 이제 저는 개발자의 시선을
+                           넘어, 사용자의 입장에서 더 편리하고 직관적인 경험을
+                           만들기 위해 고민합니다.
+                        </p>
+                     </div>
+
+                     <div class="journey-item">
+                        <div class="journey-phase">
+                           Phase 4: The Next Chapter
+                        </div>
+                        <h4 class="journey-title">
+                           함께 배우고, 함께 성장하는 동료
+                        </h4>
+                        <p class="journey-text">
+                           이제 저는 혼자가 아닌, 좋은 동료들과 함께 배우고
+                           성장하며 더 큰 가치를 만들고 싶습니다. 저의 긍정적인
+                           에너지와 꾸준함으로 팀에 기여할 수 있는 기회를
+                           기대하고 있습니다. 함께 멋진 결과물을 만들어갈 다음
+                           여정을 시작하고 싶습니다.
+                        </p>
+                     </div>
                   </div>
                </div>
             </section>
 
-            <!-- Contact -->
+            <!-- 🔹 Skills Section: 보유 기술 스택을 코드 에디터 컨셉의 UI로 시각화하여 보여주는 영역입니다. -->
+            <section id="skills" class="section" data-progress-color="#2ECC71">
+               <div class="section-title">
+                  <h2>MY STACK</h2>
+                  <p>아이디어를 현실로 바꾸는 저의 개발 도구들입니다.</p>
+               </div>
+               <!-- 코드 에디터 UI를 모방한 컨테이너입니다. -->
+               <div class="code-editor">
+                  <div class="editor-header">
+                     <div class="skills-dot-container">
+                        <span class="dot-red skills-dot"></span
+                        ><span class="dot-yellow skills-dot"></span
+                        ><span class="dot-green skills-dot"></span>
+                     </div>
+                     <span class="file-name">my-skills.js</span>
+                  </div>
+                  <!-- 에디터의 본문 영역으로, 타이핑 애니메이션과 기술 아이콘들이 표시됩니다. -->
+                  <div class="editor-body">
+                     <p>
+                        <code
+                           id="code-output"
+                           class="language-javascript"
+                        ></code>
+                     </p>
+                     <div class="skills-icons-container">
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/html.png"
+                              alt="HTML5"
+                           />
+                           <span>HTML5</span>
+                        </div>
 
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/css.png"
+                              alt="CSS3"
+                           />
+                           <span>CSS3</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/tailwindcss.png"
+                              alt="TailWindCSS"
+                           />
+                           <span>TailWindCSS</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/jquery.png"
+                              alt="JQuery"
+                           />
+                           <span>JQuery</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/js.png"
+                              alt="JavaScript"
+                           />
+                           <span>JavaScript</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/react.png"
+                              alt="React"
+                           />
+                           <span>React</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/oracle.png"
+                              alt="Oracle"
+                           />
+                           <span>Oracle</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img src="./assets/icons/skills/git.png" alt="Git" />
+                           <span>Git</span>
+                        </div>
+
+                        <div class="skill-icon">
+                           <img
+                              src="./assets/icons/skills/figma.png"
+                              alt="Figma"
+                           />
+                           <span>Figma</span>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <!-- 🔹 Projects Section: 스크롤 인터랙션 기반의 프로젝트 소개 영역입니다. -->
+            <section
+               id="projects"
+               class="section"
+               data-progress-color="#F1C40F"
+            >
+               <!-- 스크롤 기반 애니메이션을 제어하기 위한 컨테이너입니다. -->
+               <div class="scroll-magic-container">
+                  <!-- 화면에 고정될(sticky) 영역입니다. -->
+                  <div class="sticky-wrapper">
+                     <!-- 왼쪽 패널: 스크롤에 따라 프로젝트 설명이 동적으로 변경됩니다. -->
+                     <div class="left-panel">
+                        <div class="content">
+                           <h1 id="left-title"></h1>
+                           <div id="left-text"></div>
+                        </div>
+                     </div>
+                     <!-- 오른쪽 패널: 스크롤에 따라 프로젝트 이미지가 슬라이드됩니다. -->
+                     <div class="right-panel">
+                        <div class="slide is-active">
+                           <img
+                              src="./assets/images/project-the-select/The-select.png"
+                           />
+                        </div>
+                        <div class="slide">
+                           <img
+                              src="./assets/images/project-netflix/NetFlix.png"
+                           />
+                        </div>
+                        <div class="slide">
+                           <img src="./assets/images/project-apple/apple.png" />
+                        </div>
+                        <div class="slide">
+                           <img
+                              src="./assets/images/project-youtube/youtube.png"
+                           />
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <!-- 🔹 Contact Section: 연락 정보와 소셜 링크를 제공하여 소통을 유도하는 영역입니다. -->
             <section id="contact" class="section" data-progress-color="#3498DB">
-               <h2>Contact</h2>
+               <div class="section-title">
+                  <h2>WORK TOGETHER</h2>
+                  <p>함께 나눌 아이디어와 기회를 기다리고 있습니다.</p>
+               </div>
+
+               <!-- ✅ [핵심 추가] Contact 콘텐츠를 감싸는 컨테이너: 연락처 정보와 소셜 미디어 링크로 구성됩니다. -->
+               <div class="contact-container">
+                  <!-- 🔹 왼쪽: 연락 정보 및 소셜 링크 -->
+                  <div class="contact-info">
+                     <h3>Let's Connect</h3>
+                     <p>
+                        새로운 기회에 대한 논의는 언제나 환영입니다. <br />
+                        아래 연락처로 편하게 연락 주시면, 최대한 빠르게 회신
+                        드리겠습니다.
+                     </p>
+                     <div class="info-item">
+                        <img src="./assets/icons/email.png" alt="Email Icon" />
+                        <a href="mailto:shinjaejun1996@gmail.com"
+                           >shinjaejun1996@gmail.com</a
+                        >
+                     </div>
+                     <div class="info-item">
+                        <img src="./assets/icons/phone.png" alt="Phone Icon" />
+                        <span>010-9968-1342</span>
+                     </div>
+                     <div class="social-links">
+                        <a
+                           href="https://github.com/jaejun0617"
+                           target="_blank"
+                           class="social-icon"
+                           data-tooltip="GitHub"
+                        >
+                           <img
+                              src="./assets/icons/skills/git.png"
+                              alt="GitHub"
+                           />
+                        </a>
+                        <a
+                           href="https://www.notion.so/dev-6-5f336ecb3b0e4d4e9d15059bcbdb3cbc"
+                           target="_blank"
+                           class="social-icon"
+                           data-tooltip="Notion"
+                        >
+                           <img src="./assets/icons/notion.png" alt="Notion" />
+                        </a>
+                        <a
+                           href="https://open.kakao.com/o/saGS486g"
+                           target="_blank"
+                           class="social-icon"
+                           data-tooltip="Kakaotalk"
+                        >
+                           <img
+                              src="./assets/icons/emoji-profile.png"
+                              alt="Kakaotalk"
+                           />
+                        </a>
+                     </div>
+                  </div>
+               </div>
             </section>
          </main>
       </div>
 
+      <!-- =================================================================
+         ✅ 5. 프로젝트 상세 정보 모달
+         - Projects 섹션의 항목을 클릭했을 때, 상세 내용을 보여주는 팝업창(모달)입니다.
+         - 평소에는 숨겨져 있다가(display: none), JavaScript를 통해 활성화됩니다.
+      ================================================================== -->
+      <div id="projectDetailModal" class="project-modal">
+         <div class="modal-content">
+            <!-- 내용은 JS에서 동적으로 채워집니다 -->
+         </div>
+      </div>
+
+      <!-- =================================================================
+         ✅ 6. 스크립트 로드
+         - 페이지의 동적인 기능을 구현하기 위한 JavaScript 파일들을 로드합니다.
+         - 일반적으로 <body> 태그가 닫히기 직전에 위치하여 HTML 렌더링을 방해하지 않도록 합니다.
+      ================================================================== -->
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script src="./js/main.js"></script>
    </body>
 </html>
+```

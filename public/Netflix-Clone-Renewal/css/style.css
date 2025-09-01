@@ -1,0 +1,972 @@
+/* =================================================================
+1. GLOBAL & COMMON STYLES (전역 및 공통 스타일)
+================================================================= */
+
+@font-face {
+   font-family: 'Pretendard-Regular';
+   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+}
+body {
+   background-color: #000000;
+   color: #e5e5e5;
+   font-family: 'Pretendard-Regular';
+}
+
+.container {
+   width: 100%;
+}
+
+/* --- 공통 섹션 스타일 --- */
+/* 모든 섹션에 공통으로 적용될 기본 레이아웃 */
+.section {
+   width: 100%;
+   min-height: 100vh;
+   padding: 100px 5rem;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   overflow: hidden;
+}
+
+/* --- 공통 섹션 제목 스타일 --- */
+.section-title {
+   font-size: 2.2rem;
+   font-weight: 700;
+   color: #ffffff;
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+   margin-bottom: 1rem;
+   text-align: center;
+   /* border: 1px solid red; */
+}
+
+.section-subtitle {
+   font-size: 1.2rem;
+   font-weight: 400;
+   color: #e5e5e5;
+   text-align: center;
+   line-height: 1.6;
+   margin-bottom: 3rem;
+   /* border: 1px solid red; */
+}
+
+/* --- 공통 배경 레이어 스타일 --- */
+/* 각 섹션의 배경 이미지와 그라데이션을 담는 역할 */
+.section-bg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+/* --- 공통 슬라이더 컨트롤 버튼 스타일 --- */
+.slider-controls {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 2rem;
+   pointer-events: none;
+}
+
+.slider-controls button {
+   background: rgba(0, 0, 0, 0.3);
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 50%;
+   width: 50px;
+   height: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   pointer-events: auto;
+   opacity: 0.7;
+   transition:
+      opacity 0.3s,
+      transform 0.3s;
+}
+
+.slider-controls button:hover {
+   opacity: 1;
+   transform: scale(1.1);
+}
+
+.slider-controls button img {
+   width: 24px;
+   height: 24px;
+}
+
+/* =================================================================
+2. HEADER (상단 헤더)
+================================================================= */
+header {
+   width: 100%;
+   height: 60px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: rgba(20, 20, 20, 0.7);
+   z-index: 9999;
+   backdrop-filter: blur(10px);
+   padding: 0 3rem;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo img {
+   max-width: 120px;
+   height: auto;
+   display: block;
+}
+
+nav {
+   display: flex;
+   align-items: center;
+}
+
+nav > ul {
+   display: flex;
+   gap: 1rem;
+   margin-left: 2.5rem;
+}
+
+nav > ul {
+   display: flex;
+   gap: 1rem;
+   margin-left: 2.5rem;
+}
+
+nav > ul > li > a {
+   color: #fff;
+   padding: 1rem 0.75rem;
+   display: block;
+   font-size: 0.9rem;
+   font-weight: bold;
+   transition: color 0.3s;
+}
+
+nav > ul > li > a:hover {
+   color: #e50914;
+}
+
+.icons_box {
+   display: flex;
+   gap: 2rem;
+   align-items: center;
+}
+
+.icons_box img {
+   max-width: 24px;
+   height: 24px;
+   object-fit: cover;
+   display: block;
+   cursor: pointer;
+}
+
+.profile_icon {
+   width: 32px;
+   height: 32px;
+   border-radius: 50%;
+   overflow: hidden;
+}
+
+.profile_icon img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.hamburger_btn {
+   display: none;
+   background: none;
+   border: none;
+   color: #fff;
+   font-size: 1.5rem;
+   cursor: pointer;
+   z-index: 1001;
+}
+
+.hamburger_btn .fa-times {
+   display: none;
+}
+
+.hamburger_btn.active .fa-times {
+   display: block;
+}
+.hamburger_btn.active .fa-bars {
+   display: none;
+}
+.banner_container {
+   padding: 0;
+   height: 100vh;
+}
+
+/* Swiper 컨테이너 */
+.swiper.main-banner-swiper {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.swiper-slide {
+   text-align: center;
+   font-size: 18px;
+   background: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   overflow: hidden;
+}
+
+/* 슬라이드 배경 이미지 */
+.slide-background {
+   display: block;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.swiper-slide::after {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%);
+   z-index: 1;
+}
+
+.banner_content {
+   position: absolute;
+   z-index: 2;
+   left: 5rem;
+   top: 30%;
+   max-width: 600px;
+   text-align: left;
+   color: #fff;
+}
+
+.banner_headline {
+   font-size: 2.8rem;
+   font-weight: 700;
+   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+   margin-bottom: 1.5rem;
+}
+
+.banner_subheadline {
+   font-size: 1.2rem;
+   line-height: 1.6;
+   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+   margin-bottom: 2rem;
+}
+
+.cta_button {
+   /* 기존 cta_button 스타일 재사용 */
+}
+
+:root {
+   --swiper-theme-color: #ffffff;
+   --swiper-navigation-size: 30px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+   color: var(--swiper-theme-color);
+   opacity: 0.5;
+   transition: opacity 0.3s;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+   opacity: 1;
+}
+
+/* ★★★ 커스텀 재생/정지 버튼 스타일 ★★★ */
+.swiper-autoplay-control {
+   position: absolute;
+   bottom: 2rem;
+   right: 2rem;
+   z-index: 10;
+}
+
+#autoplay-toggle {
+   width: 50px;
+   height: 50px;
+   background-color: rgba(0, 0, 0, 0.4);
+   border: 1px solid rgba(255, 255, 255, 0.3);
+   border-radius: 50%;
+   color: #fff;
+   font-size: 1.2rem;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: background-color 0.3s;
+}
+
+#autoplay-toggle:hover {
+   background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 아이콘 보이기/숨기기 로직 */
+#autoplay-toggle .fa-pause {
+   display: block;
+}
+#autoplay-toggle .fa-play {
+   display: none;
+}
+
+#autoplay-toggle.paused .fa-pause {
+   display: none;
+}
+#autoplay-toggle.paused .fa-play {
+   display: block;
+}
+
+/* =================================================================
+4. SECTION 2: CATEGORY 
+================================================================= */
+
+/* h2, p 태그에 공통 .section-title, .section-subtitle 사용 */
+.category_inner {
+   width: 100%;
+}
+
+.category_bg {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: -1;
+   background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%),
+      url(../assets/images/backgroundImage/desktop.jpg);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+}
+
+.category_menu {
+   margin-bottom: 2rem;
+}
+
+.category_menu ul {
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+   justify-content: center;
+   /* border: 1px solid red; */
+}
+
+.category_menu a {
+   display: block;
+   padding: 0.5rem 1.2rem;
+   border: 1px solid rgba(255, 255, 255, 0.2);
+   border-radius: 20px;
+   transition: all 0.3s ease;
+   font-weight: 500;
+   /* border: 1px solid red; */
+}
+
+.category_menu a.active,
+.category_menu a:hover {
+   color: #ffffff;
+   background-color: #e50914;
+   border-color: #e50914;
+}
+
+.category_gallery {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   gap: 1.5rem;
+   max-height: 700px;
+   overflow: hidden;
+   transition: max-height 0.7s ease-in-out;
+}
+
+.category_gallery.expanded {
+   max-height: 5000px;
+}
+
+.rank_card {
+   position: relative;
+   cursor: pointer;
+   transition: transform 0.3s ease;
+}
+
+.rank_card:hover {
+   transform: scale(1.05);
+}
+
+.rank_card img {
+   width: 100%;
+   border-radius: 8px;
+   display: block;
+}
+
+.show_more_btn {
+   display: none;
+   margin-top: 3rem;
+   padding: 0.75rem 2.5rem;
+   background-color: rgba(109, 109, 110, 0.7);
+   color: #ffffff;
+   border: none;
+   border-radius: 4px;
+   font-weight: bold;
+   cursor: pointer;
+   transition: background-color 0.3s;
+}
+.show_more_btn:hover {
+   background-color: rgba(180, 180, 180, 0.9);
+}
+
+/* =================================================================
+ 5. SECTION 3: CLASSIC (누구나 사랑하는 명작)
+ ================================================================= */
+
+.classic_bg {
+   background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 1) 100%),
+      url(../assets/images/backgroundImage/test4.png);
+}
+
+.classic_inner {
+   width: 100%;
+}
+
+.classic_content {
+   width: 100%;
+}
+
+.classic_movies {
+   width: 100%;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-auto-rows: 200px;
+   gap: 1rem;
+}
+
+.classic_movie {
+   border-radius: 4px;
+   transition: transform 0.4s ease;
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.classic_movie:hover {
+   transform: scale(1.2);
+   z-index: 10;
+}
+
+.classic_movie_title {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   padding: 1rem;
+   background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 20%, transparent);
+   opacity: 0;
+   transform: translateY(20px);
+   transition: all 0.4s ease 0.2s;
+   font-weight: 700;
+}
+
+.classic_movie:hover .classic_movie_title {
+   opacity: 1;
+   transform: translateY(0);
+}
+
+.classic_movie_title h4,
+.classic_movie_title p {
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+   line-height: 1.4;
+}
+
+.classic_movie_title h4 {
+   font-size: 0.9rem;
+}
+.classic_movie_title p {
+   font-size: 0.8rem;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+}
+
+.classic_movie img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+/* =================================================================
+ 6. SECTION 4: GAME SLIDER (게임 슬라이더)
+================================================================= */
+.game_container {
+   /* 공통 .section 스타일이 적용됨 */
+   width: 100%;
+   min-height: 70vh;
+}
+
+.game_bg {
+   background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent, rgba(0, 0, 0, 1)),
+      url(https://assets.nflxext.com/ffe/siteui/akira/games/education/games-tab-education-07-16-25-ltr.webp);
+}
+
+.game_inner {
+   text-align: left;
+   width: 100%;
+   align-self: flex-start;
+}
+/* game_inner 내부의 h2, p 태그는 공통 .section-title, .section-subtitle 클래스를 사용하되, text-align을 재정의 */
+.game_inner .section-title,
+.game_inner .section-subtitle {
+   text-align: left;
+}
+
+.game_content {
+   width: 100%;
+   overflow: hidden;
+}
+
+.game_gallery {
+   display: flex;
+   transition: transform 0.6s ease-in-out;
+}
+
+.game_card {
+   width: 194px;
+   cursor: pointer;
+   flex-shrink: 0;
+   margin-right: 1rem;
+}
+
+.game_card_image_wrapper {
+   width: 194px;
+   height: 194px;
+   border-radius: 24.7px;
+   overflow: hidden;
+   margin-bottom: 1rem;
+   transition: transform 0.3s ease;
+}
+
+.game_card:hover .game_card_image_wrapper {
+   transform: scale(1.05);
+}
+
+.game_card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   display: block;
+}
+
+.game_card span {
+   color: #e5e5e5;
+   display: block;
+   text-align: center;
+   font-weight: bold;
+}
+
+/* =================================================================
+/7. SECTION 5: MEMBERSHIP (멤버십 가입 유도)
+/================================================================= */
+.membership_container {
+   justify-content: center;
+   gap: 4rem;
+}
+
+.membership_bg {
+   background-image:
+      linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent 40%, transparent 60%, rgba(0, 0, 0, 1)),
+      url(../assets/images/backgroundImage/desktop.jpg);
+   background-attachment: fixed;
+}
+
+.benefits_grid {
+   width: 100%;
+   max-width: 1200px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 2rem;
+}
+
+.benefit_card {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1.5rem;
+   padding: 2rem;
+   background-color: rgba(20, 20, 20, 0.7);
+   border: 1px solid rgba(255, 255, 255, 0.1);
+   border-radius: 8px;
+   text-align: center;
+}
+
+.benefit_icon i {
+   font-size: 2.5rem;
+   color: #e50914;
+}
+
+.benefit_title {
+   font-size: 1.1rem;
+   font-weight: 500;
+   color: #ffffff;
+   line-height: 1.5;
+}
+
+.plans_table_container {
+   width: 100%;
+   max-width: 1200px;
+   display: flex;
+   justify-content: center;
+   align-items: stretch;
+   flex-wrap: wrap;
+   gap: 2rem;
+}
+
+.charge {
+   flex: 1;
+   min-width: 300px;
+   padding: 2.5rem 2rem;
+   border-radius: 12px;
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   position: relative;
+   overflow: hidden;
+   transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+}
+
+.charge:hover {
+   transform: translateY(-10px);
+   box-shadow:
+      0 20px 25px -5px rgba(0, 0, 0, 0.3),
+      0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.plan-ad-standard {
+   background: linear-gradient(to bottom, rgba(29, 78, 216, 0.4), rgba(0, 0, 0, 0.5));
+}
+.plan-standard {
+   background: linear-gradient(to bottom, rgba(126, 34, 206, 0.4), rgba(29, 78, 216, 0.5));
+}
+.plan-premium {
+   background: linear-gradient(to bottom, rgba(219, 39, 119, 0.4), rgba(126, 34, 206, 0.5), rgba(29, 78, 216, 0.6));
+}
+
+.charge.recommended {
+   border-color: #e50914;
+}
+
+.recommended_badge {
+   position: absolute;
+   top: -15px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: #e50914;
+   color: #fff;
+   padding: 0.4rem 1.2rem;
+   border-radius: 20px;
+   font-size: 0.9rem;
+   font-weight: bold;
+}
+
+.plan_header {
+   text-align: left;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   padding-bottom: 1.5rem;
+}
+.plan_header h3 {
+   font-size: 1.8rem;
+   font-weight: 600;
+   color: #fff;
+}
+.plan_header .price {
+   font-size: 1.1rem;
+   color: #e5e5e5;
+   margin-top: 0.5rem;
+}
+
+.plan_details {
+   text-align: left;
+   flex-grow: 1;
+}
+
+.plan_details ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-direction: column;
+   gap: 1.2rem;
+}
+
+.plan_details li {
+   display: flex;
+   align-items: center;
+   font-size: 1rem;
+   color: #e5e5e5;
+}
+
+.plan_details li::before {
+   content: '✓';
+   color: #34d399;
+   font-weight: bold;
+   font-size: 1.2rem;
+   margin-right: 0.75rem;
+}
+
+.final_cta {
+   width: 100%;
+   border-top: 1px solid rgba(255, 255, 255, 0.1);
+   padding-top: 3rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.cta_button {
+   padding: 1rem 2.5rem;
+   background-color: #e50914;
+   color: #ffffff;
+   border: none;
+   border-radius: 4px;
+   font-size: 1.2rem;
+   font-weight: bold;
+   cursor: pointer;
+   transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+}
+
+.cta_button:hover {
+   background-color: #f6121d;
+   transform: scale(1.05);
+}
+
+.cta_button_final {
+   padding: 1.2rem 3rem;
+   font-size: 1.5rem;
+   margin-top: 1rem;
+   text-align: center;
+}
+
+.no_commitment_text {
+   font-size: 0.9rem;
+   color: #a0a0a0;
+   margin-top: 1rem;
+   text-align: center;
+}
+
+footer {
+   width: 100%;
+   height: 3rem;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+footer p {
+   text-align: center;
+   font-size: 0.85rem;
+}
+
+@media (max-width: 1107px) {
+   nav ul {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.4s ease,
+         visibility 0.4s ease;
+      margin: 0;
+   }
+
+   nav ul.active {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   nav ul li a {
+      font-size: 1.5rem;
+   }
+
+   .hamburger_btn {
+      display: block;
+   }
+
+   .benefit_card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 2rem;
+      background-color: rgba(20, 20, 20, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      text-align: center;
+   }
+
+   .benefits_grid {
+      width: 100%;
+      max-width: 1200px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-rows: repeat(2, 250px);
+      gap: 2rem;
+   }
+}
+
+@media (max-width: 500px) {
+   header {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(20, 20, 20, 0.7);
+      z-index: 9999;
+      backdrop-filter: blur(10px);
+      padding: 0 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+   }
+   nav ul {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      visibility: hidden;
+      transition:
+         opacity 0.4s ease,
+         visibility 0.4s ease;
+      margin: 0;
+   }
+
+   nav ul.active {
+      opacity: 1;
+      visibility: visible;
+   }
+
+   nav ul li a {
+      font-size: 1.5rem;
+   }
+
+   .hamburger_btn {
+      display: block;
+   }
+   .icons_box {
+      gap: 1.5rem;
+   }
+
+   .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      margin-bottom: 1rem;
+      text-align: center;
+      /* border: 1px solid red; */
+   }
+
+   .section-subtitle {
+      font-size: 0.765rem;
+      font-weight: 400;
+      color: #e5e5e5;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+      /* border: 1px solid red; */
+   }
+
+   .m_btn {
+      display: none;
+   }
+
+   .banner_container {
+      height: 70vh;
+   }
+
+   .banner_content {
+      left: 1.5rem;
+      right: 1.5rem;
+      top: auto;
+      bottom: 25%;
+      text-align: center;
+   }
+
+   .banner_headline {
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+      margin-bottom: 1.5rem;
+   }
+
+   .banner_subheadline {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+      margin-bottom: 2rem;
+   }
+   .category_menu {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding-right: 1.687rem;
+   }
+
+   .category_menu ul li {
+      width: 120px;
+      text-align: center;
+   }
+}

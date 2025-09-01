@@ -1,0 +1,168 @@
+{
+   "genres": [
+      {
+         "id": "action-adventure",
+         "ko": "액션 & 어드벤처",
+         "en": "Action & Adventure",
+         "contents": [
+            {
+               "title": "아바다",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit. dipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "괴물",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "스파이더맨",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "베트맨",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "트랜스포머",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "안녕안녕",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "아바다",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "괴물",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "스파이더맨",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "베트맨",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "트랜스포머",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "안녕안녕",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            }
+         ]
+      },
+      {
+         "id": "animation",
+         "ko": "애니메이션",
+         "en": "Animation",
+         "contents": [
+            {
+               "title": "짱구",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "나루토",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "귀멸의칼알",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "도라에몽",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "주술회전",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            },
+            {
+               "title": "원피스",
+               "summary": "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+               "thumbnail": "https://picsum.photos/300/200"
+            }
+         ]
+      },
+      {
+         "id": "kids-family",
+         "ko": "어린이 & 가족 영화",
+         "en": "Kids & Family"
+      },
+      {
+         "id": "classic-movies",
+         "ko": "고전 영화",
+         "en": "Classic Movies"
+      },
+      {
+         "id": "comedy",
+         "ko": "코미디",
+         "en": "Comedy"
+      },
+      {
+         "id": "documentary",
+         "ko": "다큐멘터리",
+         "en": "Documentary"
+      },
+      {
+         "id": "drama",
+         "ko": "드라마",
+         "en": "Drama"
+      },
+      {
+         "id": "horror",
+         "ko": "공포",
+         "en": "Horror"
+      },
+      {
+         "id": "music",
+         "ko": "음악",
+         "en": "Music"
+      },
+      {
+         "id": "romance",
+         "ko": "로맨스",
+         "en": "Romance"
+      },
+      {
+         "id": "sci-fi-fantasy",
+         "ko": "SF & 판타지",
+         "en": "Sci-Fi & Fantasy"
+      },
+      {
+         "id": "sports",
+         "ko": "스포츠",
+         "en": "Sports"
+      },
+      {
+         "id": "thriller",
+         "ko": "스릴러",
+         "en": "Thriller"
+      },
+      {
+         "id": "tv-series",
+         "ko": "TV 시리즈",
+         "en": "TV Series"
+      }
+   ]
+}

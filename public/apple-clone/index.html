@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="ko">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Apple-Clone</title>
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body>
+      <!--전체 컨테이너-->
+      <div class="container">
+         <!--헤더영역-->
+         <header>
+            <!--메뉴영역-->
+            <nav>
+               <ul>
+                  <li>
+                     <a href="#" aria-label="Apple 로고">
+                        <svg height="39" viewBox="0 0 14 39" width="14" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+                           ></path>
+                        </svg>
+                     </a>
+                  </li>
+                  <li><a href="#">스토어</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">AirPods</a></li>
+                  <li><a href="#">TV 및 홈</a></li>
+                  <li><a href="#">엔터테인먼트</a></li>
+                  <li><a href="#">액세서리</a></li>
+                  <li><a href="#">고객지원</a></li>
+                  <li>
+                     <a href="#" aria-label="검색">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="15px" height="39px" viewBox="0 0 15 39">
+                           <path
+                              d="M14.298,27.202l-3.87-3.87c0.701-0.929,1.122-2.081,1.122-3.332c0-3.06-2.489-5.55-5.55-5.55c-3.06,0-5.55,2.49-5.55,5.55 c0,3.061,2.49,5.55,5.55,5.55c1.251,0,2.403-0.421,3.332-1.122l3.87,3.87c0.151,0.151,0.35,0.228,0.548,0.228 s0.396-0.076,0.548-0.228C14.601,27.995,14.601,27.505,14.298,27.202z M1.55,20c0-2.454,1.997-4.45,4.45-4.45 c2.454,0,4.45,1.997,4.45,4.45S8.454,24.45,6,24.45C3.546,24.45,1.55,22.454,1.55,20z"
+                           ></path>
+                        </svg>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#" aria-label="쇼핑백">
+                        <svg height="39" viewBox="0 0 14 39" width="14" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="m11.3535 16.0283h-1.0205a3.4229 3.4229 0 0 0 -3.333-2.9648 3.4229 3.4229 0 0 0 -3.333 2.9648h-1.02a2.1184 2.1184 0 0 0 -2.117 2.1162v7.7155a2.1186 2.1186 0 0 0 2.1162 2.1167h8.707a2.1186 2.1186 0 0 0 2.1168-2.1167v-7.7155a2.1184 2.1184 0 0 0 -2.1165-2.1162zm-4.3535-1.8652a2.3169 2.3169 0 0 1 2.2222 1.8652h-4.4444a2.3169 2.3169 0 0 1 2.2222-1.8652zm5.37 11.6969a1.0182 1.0182 0 0 1 -1.0166 1.0171h-8.7069a1.0182 1.0182 0 0 1 -1.0165-1.0171v-7.7155a1.0178 1.0178 0 0 1 1.0166-1.0166h8.707a1.0178 1.0178 0 0 1 1.0164 1.0166z"
+                           ></path>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </nav>
+
+            <div class="m_menu">
+               <div class="m_logo">
+                  <a href="#" aria-label="Apple 로고">
+                     <svg height="39" viewBox="0 0 14 39" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="m13.0729 17.6825a3.61 3.61 0 0 0 -1.7248 3.0365 3.5132 3.5132 0 0 0 2.1379 3.2223 8.394 8.394 0 0 1 -1.0948 2.2618c-.6816.9812-1.3943 1.9623-2.4787 1.9623s-1.3633-.63-2.613-.63c-1.2187 0-1.6525.6507-2.644.6507s-1.6834-.9089-2.4787-2.0243a9.7842 9.7842 0 0 1 -1.6628-5.2776c0-3.0984 2.014-4.7405 3.9969-4.7405 1.0535 0 1.9314.6919 2.5924.6919.63 0 1.6112-.7333 2.8092-.7333a3.7579 3.7579 0 0 1 3.1604 1.5802zm-3.7284-2.8918a3.5615 3.5615 0 0 0 .8469-2.22 1.5353 1.5353 0 0 0 -.031-.32 3.5686 3.5686 0 0 0 -2.3445 1.2084 3.4629 3.4629 0 0 0 -.8779 2.1585 1.419 1.419 0 0 0 .031.2892 1.19 1.19 0 0 0 .2169.0207 3.0935 3.0935 0 0 0 2.1586-1.1368z"
+                        ></path>
+                     </svg>
+                  </a>
+               </div>
+               <ul class="drops_menu">
+                  <li><a href="#">스토어</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">AirPods</a></li>
+                  <li><a href="#">TV 및 홈</a></li>
+                  <li><a href="#">엔터테인먼트</a></li>
+                  <li><a href="#">액세서리</a></li>
+                  <li><a href="#">고객지원</a></li>
+               </ul>
+            </div>
+            <div class="hamburger" id="hamburger">☰</div>
+         </header>
+
+         <!--섹션1 "배너" -->
+         <section class="banner_section">
+            <div class="banner_title">
+               <h2>iPhone</h2>
+               <h4>iPhone 16 라인업을 만나볼까요?</h4>
+               <div class="banner_btn">
+                  <button class="banner_btn_left" type="button">
+                     <span class="banner_btn_left_text">더 알아보기</span>
+                  </button>
+                  <button class="banner_btn_right" type="button">
+                     <span>쇼핑하기</span>
+                  </button>
+               </div>
+               <h5>Apple Intelligence를 위한 탄생.</h5>
+               <h6>Apple Intelligence, 현재 한국어로 서비스 중</h6>
+            </div>
+         </section>
+
+         <!--섹션 2 -->
+         <section class="MacBook_section">
+            <div class="MacBook_title">
+               <h2>MacBook Air</h2>
+               <h4>
+                  하늘빛 새 컬러. <br />
+                  M4 칩 탑재로 성능도 하늘 높이.
+               </h4>
+               <div class="banner_btn">
+                  <button class="banner_btn_left" type="button">
+                     <span class="banner_btn_left_text">더 알아보기</span>
+                  </button>
+                  <button class="banner_btn_right" type="button">
+                     <span>구입하기</span>
+                  </button>
+               </div>
+            </div>
+            <div class="MacBook_end_text">
+               <h5 class="gradient">Apple Intelligence를 위한 탄생.</h5>
+               <h6>Apple Intelligence, 현재 한국어로 서비스 중</h6>
+            </div>
+         </section>
+
+         <!--섹션 3 -->
+         <section class="Watch_section">
+            <div class="Watch_title">
+               <img src="./assets/images/banner03-2.png" alt="Apple Watch" />
+               <h4>얇아진 두께. 더 커진 존재감.</h4>
+               <div class="banner_btn">
+                  <button class="banner_btn_left" type="button">
+                     <span class="banner_btn_left_text">더 알아보기</span>
+                  </button>
+                  <button class="banner_btn_right" type="button">
+                     <span>구입하기</span>
+                  </button>
+               </div>
+            </div>
+         </section>
+
+         <!--섹션 4 -->
+         <section class="Collection_section">
+            <div class="traffic">
+               <div class="Collection_title">
+                  <h2>이제 iPhone에</h2>
+                  <p class="traffic_sub_titele"><strong>교통카드 도착.</strong></p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">더 알아보기</span>
+                     </button>
+                     <button class="Collection_btn_right traffic_text" type="button">
+                        <span>iPhone 쇼핑하기</span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="iPadair">
+               <div class="Collection_title iPadair_title">
+                  <h2>iPad Air</h2>
+                  <p class="Collection_sub_titele">이제 막강한 성능의 M3 칩 탑재.</p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">더 알아보기</span>
+                     </button>
+                     <button class="Collection_btn_right" type="button">
+                        <span>구입하기</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="MacBook_end_text">
+                  <h5 class="gradient">Apple Intelligence를 위한 탄생.</h5>
+                  <h6>Apple Intelligence, 현재 한국어로 서비스 중</h6>
+               </div>
+            </div>
+            <div class="iPadPro">
+               <div class="Collection_title iPadPro_title">
+                  <h2>iPad Pro</h2>
+                  <p class="Collection_sub_titele">놀라우리만치 얇다. 엄청나게 강력하다.</p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">더 알아보기</span>
+                     </button>
+                     <button class="Collection_btn_right" type="button">
+                        <span>구입하기</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="MacBook_end_text">
+                  <h5 class="gradient">Apple Intelligence를 위한 탄생.</h5>
+                  <h6>Apple Intelligence, 현재 한국어로 서비스 중</h6>
+               </div>
+            </div>
+            <div class="MacBookPro">
+               <div class="Collection_title MacBookPro_title">
+                  <h2>MacBook Pro</h2>
+                  <p class="Collection_sub_titele">예술의 경지에 오른 스마트함.</p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">더 알아보기</span>
+                     </button>
+                     <button class="Collection_btn_right" type="button">
+                        <span>구입하기</span>
+                     </button>
+                  </div>
+               </div>
+               <div class="MacBook_end_text">
+                  <h5 class="gradient">Apple Intelligence를 위한 탄생.</h5>
+                  <h6>Apple Intelligence, 현재 한국어로 서비스 중</h6>
+               </div>
+            </div>
+            <div class="AirPods4">
+               <div class="Collection_title AirPods4_title">
+                  <h2>AirPods 4</h2>
+                  <p class="Collection_sub_titele">아이콘의 귀환. 사운드의진화.</p>
+                  <p class="Collection_sub_titele">액티브 노이즈 캔슬링 탑재.</p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">더 알아보기</span>
+                     </button>
+                     <button class="Collection_btn_right" type="button">
+                        <span>구입하기</span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="TradeIn">
+               <div class="Collection_title">
+                  <h2>Trade In</h2>
+                  <p class="Collection_sub_titele">iPhone 12 이상의 모델을 보상 판매하면</p>
+                  <p class="Collection_sub_titele">₩180,000 - ₩1,030,000</p>
+                  <p class="Collection_sub_titele">상당의 크레딧이.</p>
+                  <div class="Collection_btn">
+                     <button class="Collection_btn_left" type="button">
+                        <span class="Collection_btn_left_text">견적확인하기</span>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <!--추가 섹션 필요 시 추가-->
+         <!--섹션 5 -->
+         <section class="slider_container">
+            <div class="slider_track">
+               <div class="slide active">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/HsJqgEXXaevqJ94-tyz0jQ/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>스릴러 · 두 요원 사이에 놓인 세상에서 가장 위험한 비밀</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/EviF5KEP5X6ycr0I5QR_IA/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>코미디 · 그가 돌아온다.</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/hCfBMF1R8mitgipZtRrJIw/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>드라마 · 우리 안에는 운명을 스스로 바꿀 용기가 있다</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/vWrruv_JuOZkCwWQG6ZVWw/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>스릴러 · 일보다 중요한 것은 없다</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/jKsrHHJKf192OLDN6kMh4g/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>액션 · Only in theaters June 27.</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/71SCc2C4bOuYVD9-3P-PQw/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>다큐멘터리 · 월드시리즈의 짜릿한 현장을 들여다본다.</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/SSVr2ZxJ3bUc655YFoRy1Q/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>SF · 살아남으려면, 목숨 걸고 지켜야 한다.</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/PpNA7zp0nJJN23khb-XDUw/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>드라마 · 스티븐 스필버그, 톰 행크스, 게리 고츠만 제작</p>
+                  </div>
+               </div>
+               <div class="slide">
+                  <img src="https://is1-ssl.mzstatic.com/image/thumb/xO0BO6SH877VpYQg4t5yjw/2500x1406.jpg" alt="" />
+                  <div class="slide_content">
+                     <button>지금 시청하기</button>
+                     <p>어드벤처 · 어떤 비밀은 결코 묻히지 않는다</p>
+                  </div>
+               </div>
+            </div>
+            <button class="pause_btn" id="pauseBtn">⏸</button>
+
+            <div class="dots"></div>
+         </section>
+         <!--섹션 6 -->
+         <section class="info_container">
+            <div class="info_text">
+               <p>
+                  1. Apple Intelligence는 Siri 및 기기 언어를 한국어, 중국어(간체), 영어(오스트레일리아, 캐나다, 인도,
+                  아일랜드, 뉴질랜드, 싱가포르, 남아프리카 공화국, 영국, 미국), 프랑스어, 독일어, 이탈리아어, 일본어,
+                  포르투갈어(브라질), 스페인어로 설정한 iPhone 16 전체 모델, iPhone 15 Pro, iPhone 15 Pro Max, iPad
+                  mini(A17 Pro 모델) 그리고 M1 이후 iPad 및 Mac 모델에서 베타로 사용할 수 있으며, iOS 18, iPadOS 18,
+                  macOS Sequoia 소프트웨어 업데이트를 통해 제공됩니다.<br />
+                  올해 안으로 베트남어 등 지원 언어가 계속 추가될 예정입니다. 일부 기능은 한국어로 제공되지 않습니다.<br /><br />
+
+                  2. 두 가지 모델로 제공됩니다: AirPods 4 및 AirPods 4 액티브 노이즈 캔슬링 모델.<br /><br />
+
+                  3. ₩1,030,000은 iPhone 15 Pro Max 1TB 모델의 보상 판매 금액으로, 보상 판매 서비스는 Apple의 파트너사를
+                  통해 제공됩니다. Apple 및 계열사는 고객과 파트너 간 계약 당사자가 아닙니다.<br />
+                  보상 판매 견적액은 예상 금액이며, 실제 금액이 더 낮을 수 있습니다. 보상 판매 금액은 기기의 상태, 연도,
+                  모델, 최초 판매 국가/지역에 따라 다릅니다.<br />
+                  일부 기기는 보상 판매 대상이 아니며, 보상 판매를 위해서는 민법상 성년이어야 합니다. 보상 판매 금액은
+                  새 기기 구입 시 적용하거나 Apple Store Gift Card로 받을 수 있습니다.<br />
+                  최종 금액은 기기 수령 후 검수 결과에 따라 확정됩니다. 부가세는 새 기기 총액에 부과됩니다. 일부
+                  매장에서는 보상 판매를 제공하지 않으며, 매장과 온라인 프로그램 간 차이가 있을 수 있습니다.<br />
+                  Apple의 보상 판매 파트너는 거래 거부, 취소 또는 수량 제한 권한을 보유합니다. 보상 판매 및 재활용 관련
+                  자세한 내용은 Apple 보상 판매 파트너사에서 확인하십시오.<br /><br />
+
+                  4. Apple TV+ 이용을 위해서는 구독이 필요하며, 기능은 변경될 수 있습니다. 일부 기능, 애플리케이션 및
+                  서비스는 이용할 수 없는 국가나 언어가 있습니다.<br /><br />
+
+                  5. 사용 가능한 티머니 카드를 Apple 지갑에 추가하려면 iOS 17.2 이상이 설치된 iPhone XS, XR 이후 모델
+                  또는 watchOS 10.2 이상이 설치된 Apple Watch Series 6, SE 2세대 이후 모델이 필요합니다. Apple 지갑에는
+                  선불형 티머니 카드만 추가할 수 있습니다.<br /><br />
+
+                  6. Apple 지갑 속 티머니는 일부 시외버스 또는 일부 지역 택시를 제외한 대한민국 내 티머니 지원 교통수단
+                  어디서든 사용 가능합니다. 티머니 사용처에 대한 자세한 설명은 관련 안내를 참고하십시오.<br />
+                  대한민국에서는 선불형 티머니 카드만 Apple 지갑 속 교통카드로 지원됩니다.
+               </p>
+
+               <div class="line"></div>
+            </div>
+         </section>
+         <!--섹션 7 -->
+         <section>
+            <div class="m_apple_menu" aria-label="애플 메뉴">
+               <ul>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section1"
+                     >
+                        쇼핑 및 알아보기
+                     </div>
+                     <div class="accordion_content" id="section1" role="region" aria-hidden="true">
+                        <ul>
+                           <li>스토어</li>
+                           <li>Mac</li>
+                           <li>iPad</li>
+                           <li>iPhone</li>
+                           <li>Watch</li>
+                           <li>Vision</li>
+                           <li>AirPods</li>
+                           <li>TV 및 홈</li>
+                           <li>AirTag</li>
+                           <li>액세서리</li>
+                           <li>Apple 지갑</li>
+                           <li>지갑</li>
+                           <li>Apple Pay</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section2"
+                     >
+                        계정
+                     </div>
+                     <div class="accordion_content" id="section2" role="region" aria-hidden="true">
+                        <ul>
+                           <li>Apple 계정 관리</li>
+                           <li>Apple Store 계정</li>
+                           <li>iCloud.com</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section3"
+                     >
+                        엔터테인먼트
+                     </div>
+                     <div class="accordion_content" id="section3" role="region" aria-hidden="true">
+                        <ul>
+                           <li>Apple One</li>
+                           <li>Apple TV+</li>
+                           <li>Apple Music</li>
+                           <li>Apple Arcade</li>
+                           <li>Apple 팟캐스트</li>
+                           <li>Apple Books</li>
+                           <li>App Store</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section4"
+                     >
+                        Apple Store
+                     </div>
+                     <div class="accordion_content" id="section4" role="region" aria-hidden="true">
+                        <ul>
+                           <li>매장 찾기</li>
+                           <li>Genius Bar</li>
+                           <li>Today at Apple</li>
+                           <li>그룹 예약</li>
+                           <li>Apple 캠프</li>
+                           <li>Apple Store 앱</li>
+                           <li>인증 리퍼비쉬 제품</li>
+                           <li>Apple Trade In</li>
+                           <li>할부 방식</li>
+                           <li>주문 상태</li>
+                           <li>쇼핑 도움말</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section5"
+                     >
+                        비즈니스
+                     </div>
+                     <div class="accordion_content" id="section5" role="region" aria-hidden="true">
+                        <ul>
+                           <li>Apple과 비즈니스</li>
+                           <li>비즈니스를 위한 제품 쇼핑하기</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section6"
+                     >
+                        교육
+                     </div>
+                     <div class="accordion_content" id="section6" role="region" aria-hidden="true">
+                        <ul>
+                           <li>Apple과 교육</li>
+                           <li>초중고용 제품 쇼핑하기</li>
+                           <li>대학 생활을 위한 제품 쇼핑하기</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section7"
+                     >
+                        Apple의 가치관
+                     </div>
+                     <div class="accordion_content" id="section7" role="region" aria-hidden="true">
+                        <ul>
+                           <li>손쉬운 사용</li>
+                           <li>교육</li>
+                           <li>환경</li>
+                           <li>개인정보 보호</li>
+                           <li>공급망 혁신</li>
+                        </ul>
+                     </div>
+                  </li>
+                  <li>
+                     <div
+                        class="accordion_header"
+                        tabindex="0"
+                        role="button"
+                        aria-expanded="false"
+                        aria-controls="section8"
+                     >
+                        Apple 정보
+                     </div>
+                     <div class="accordion_content" id="section8" role="region" aria-hidden="true">
+                        <ul>
+                           <li>Newsroom</li>
+                           <li>Apple 리더십</li>
+                           <li>채용 안내</li>
+                           <li>윤리 및 규정 준수</li>
+                           <li>이벤트</li>
+                           <li>일자리 창출</li>
+                           <li>Apple 연락처</li>
+                        </ul>
+                     </div>
+                  </li>
+               </ul>
+            </div>
+
+            <div class="apple_menu">
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>쇼핑 및 알아보기</strong></a>
+                  </li>
+                  <li><a href="#">스토어</a></li>
+                  <li><a href="#">Mac</a></li>
+                  <li><a href="#">iPad</a></li>
+                  <li><a href="#">iPhone</a></li>
+                  <li><a href="#">Watch</a></li>
+                  <li><a href="#">Vision</a></li>
+                  <li><a href="#">AirPods</a></li>
+                  <li><a href="#">AirTag</a></li>
+                  <li><a href="#">액세서리</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>계정</strong></a>
+                  </li>
+                  <li><a href="#">Apple 계정 관리</a></li>
+                  <li><a href="#">Apple Store 계정</a></li>
+                  <li><a href="#">iCloud.com</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>Apple Store</strong></a>
+                  </li>
+                  <li><a href="#">매장 찾기</a></li>
+                  <li><a href="#">Genius Bar</a></li>
+                  <li><a href="#">Today at Apple</a></li>
+                  <li><a href="#">그룹 예약</a></li>
+                  <li><a href="#">Apple 캠프</a></li>
+                  <li><a href="#">Apple Store 앱</a></li>
+                  <li><a href="#">인증 리퍼비쉬 제품</a></li>
+                  <li><a href="#">Apple Trade In</a></li>
+                  <li><a href="#">할부 방식</a></li>
+                  <li><a href="#">주문 상태</a></li>
+                  <li><a href="#">쇼핑 도움말</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>비즈니스</strong></a>
+                  </li>
+                  <li><a href="#">Apple과 비즈니스</a></li>
+                  <li><a href="#">비즈니스를 위한 제품 쇼핑하기</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>Apple의 가치관</strong></a>
+                  </li>
+                  <li><a href="#">손쉬운 사용</a></li>
+                  <li><a href="#">교육</a></li>
+                  <li><a href="#">환경</a></li>
+                  <li><a href="#">개인정보 보호</a></li>
+                  <li><a href="#">공급망 혁신</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>Apple 지갑</strong></a>
+                  </li>
+                  <li><a href="#">지갑</a></li>
+                  <li><a href="#">Apple Pay</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>엔터테인먼트</strong></a>
+                  </li>
+                  <li><a href="#">Apple One</a></li>
+                  <li><a href="#">Apple TV+</a></li>
+                  <li><a href="#">Apple Music</a></li>
+                  <li><a href="#">Apple Arcade</a></li>
+                  <li><a href="#">Apple 팟캐스트</a></li>
+                  <li><a href="#">Apple Books</a></li>
+                  <li><a href="#">App Store</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>교육</strong></a>
+                  </li>
+                  <li><a href="#">Apple과 교육</a></li>
+                  <li><a href="#">초중고용 제품 쇼핑하기</a></li>
+                  <li><a href="#">대학 생활을 위한 제품 쇼핑하기</a></li>
+               </ul>
+               <ul class="apple_main_menu">
+                  <li>
+                     <a href="#"><strong>Apple 정보</strong></a>
+                  </li>
+                  <li><a href="#">Newsroom</a></li>
+                  <li><a href="#">Apple 리더십</a></li>
+                  <li><a href="#">채용 안내</a></li>
+                  <li><a href="#">윤리 및 규정 준수</a></li>
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">일자리 창출</a></li>
+                  <li><a href="#">Apple 연락처</a></li>
+               </ul>
+            </div>
+         </section>
+
+         <!--푸터영역-->
+         <footer>
+            <p>&copy; 2025 재준. 이 사이트는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+         </footer>
+      </div>
+   </body>
+   <script src="./js/main.js" defer></script>
+</html>

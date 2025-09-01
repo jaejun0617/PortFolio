@@ -1,0 +1,192 @@
+@media (min-width: 769px) and (max-width: 1023px) {
+   body {
+      background-color: #000000;
+      scroll-behavior: smooth;
+   }
+
+   /* 헤더영역 */
+
+   header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 56px;
+      background: #000;
+      z-index: 100;
+      line-height: 56px;
+      padding-left: 20px;
+      font-weight: bold;
+      box-sizing: border-box;
+   }
+
+   nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+   }
+
+   .hamburger {
+      cursor: pointer;
+      position: absolute;
+      top: 17px;
+      left: 10px;
+      transform: translate(-50%);
+   }
+
+   .logo {
+      width: 130px;
+      height: 50px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      margin-left: 30px;
+   }
+
+   .search_bar {
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background-color: #000;
+      border-radius: 15px;
+      height: 40px;
+      line-height: 40px;
+      width: 500px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #fff;
+      position: absolute;
+      top: 12%;
+      left: 50%;
+      transform: translate(-50%);
+   }
+
+   .search_bar input::placeholder {
+      padding-bottom: 10px;
+      padding-left: 10px;
+      font-size: 1rem;
+   }
+
+   .search_bar_icon {
+      width: 40px;
+      border-radius: 15px;
+      cursor: pointer;
+   }
+
+   .search_bar img,
+   .notice img {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+   }
+
+   .right_icon {
+      width: 200px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-right: 30px;
+   }
+   .carte {
+      font-size: 0.825rem;
+      cursor: pointer;
+   }
+
+   .jaejun {
+      border-radius: 20px;
+      background-color: #fff;
+      cursor: pointer;
+   }
+   .jaejun img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      display: block;
+   }
+   /* 헤더영역 끝*/
+
+   /* 사이드바 */
+   aside {
+      display: none;
+      border: 1px solid red;
+   }
+   .menu {
+      display: none;
+   }
+   hr {
+      display: none;
+   }
+   /* 사이드바 끝  */
+
+   /* 메인 영역 무한 스크롤*/
+
+   .category {
+      position: sticky;
+      top: 56px; /* header 높이만큼 띄우기 */
+      height: 56px;
+      background: #000000;
+
+      line-height: 56px;
+      padding-left: 10px;
+      font-weight: bold;
+      z-index: 10;
+      width: 100vw;
+   }
+
+   .category > ul {
+      display: flex;
+      gap: 13px;
+      align-items: center;
+      padding: 8px;
+   }
+   .category > ul > li {
+      font-size: 0.85rem;
+      cursor: pointer;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      height: 35px;
+      color: #f1f1f1;
+      line-height: 35px;
+      padding: 0px 15px;
+      transition: all 0.5s ease-in-out;
+   }
+
+   .category ul li.active {
+      background-color: #fff;
+      color: #000;
+   }
+
+   main {
+      padding-top: 56px; /* header 높이만큼 띄우기 */
+
+      min-height: 100vh;
+      box-sizing: border-box;
+      scrollbar-width: thin;
+      scrollbar-color: #ccc #000;
+   }
+
+   #content {
+      display: grid;
+      grid-template-columns: repeat(2, 400px);
+      grid-template-rows: repeat(2, 250px);
+      gap: 2rem;
+      height: 100svh;
+      width: 100%;
+   }
+
+   .item {
+      width: 400px;
+      height: 250px;
+      background-image: url(../assets/images/thumb.jpeg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+   }
+}
+
+@media (max-width: 480px) {
+   /* 모바일 스타일 */
+}
