@@ -32,6 +32,43 @@
       }
    },
    {
+      "imgSrc": "./assets/images/project-weather/Weather-Report.png",
+      "title": "Weather Report",
+      "headline": "다중 API를 활용한 동적 날씨 정보 웹사이트",
+      "overview": "Vanilla JS와 다중 API 연동을 통해 사용자의 위치 기반 실시간 날씨 정보를 제공하는 동적 웹 애플리케이션입니다. 흩어져 있는 날씨, 대기, 생활 정보를 하나의 대시보드로 통합하고, Chart.js와 카카오맵 API를 활용하여 데이터를 직관적으로 시각화하는 데 중점을 두었습니다.",
+      "features": [
+         {
+            "name": "다중 API 비동기 처리 및 데이터 융합",
+            "tech": [
+               "Promise.all",
+               "fetch API",
+               "async/await",
+               "Geolocation API"
+            ],
+            "desc": "총 4개의 서로 다른 API를 병렬로 호출하고, 모든 데이터가 도착했을 때 UI를 한 번에 렌더링하는 효율적인 비동기 로직을 구현했습니다."
+         },
+         {
+            "name": "인터랙티브 데이터 시각화",
+            "tech": ["Chart.js", "DOM API", "CSS Animations"],
+            "desc": "Chart.js를 이용해 시간대별 온도 변화를 꺾은선 그래프로 시각화하고, 현재 날씨 상태에 따라 배경 이미지를 동적으로 변경하여 몰입감을 높였습니다."
+         },
+         {
+            "name": "외부 API 연동 및 커스터마이징 (카카오맵)",
+            "tech": ["Kakao Maps API", "ImageOverlay", "비동기 스크립트 로딩"],
+            "desc": "카카오맵 API 위에 기상청의 실시간 레이더/위성 영상을 오버레이하여 시각적 탐색 기능을 구현했으며, API 로딩 시점 차이로 발생하는 에러를 kakao.maps.load()로 해결했습니다."
+         },
+         {
+            "name": "데이터 기반의 실용적 정보 제공",
+            "tech": ["JavaScript 조건문", "DOM 생성", "CSS Grid"],
+            "desc": "모든 날씨 데이터를 종합 분석하여 기온과 상황에 맞는 옷차림을 추천하고, CSS Grid를 활용하여 반응형 생활 지수 카드를 구현했습니다."
+         }
+      ],
+      "links": {
+         "github": "https://github.com/jaejun0617/Weather-Report",
+         "site": "https://jaejun0617.github.io/Weather-Report/"
+      }
+   },
+   {
       "imgSrc": "./assets/images/project-netflix/NetFlix.png",
       "title": "NetFlix 클론코딩",
       "headline": "React와 외부 API를 활용한 영화 정보 사이트",

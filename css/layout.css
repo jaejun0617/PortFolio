@@ -158,7 +158,7 @@
 }
 /* 🔹 Projects 섹션 내부 레이아웃 */
 .scroll-magic-container {
-   height: 400vh;
+   height: 500vh;
    width: 100%;
    background-image: var(--projects-bg-image);
 }
